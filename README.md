@@ -6,8 +6,8 @@ Here's a list of important things in this repository to get you going quickly:
 
 - *JSONSchema documents* If you want to validate your JSON documents against a schema then you can [find them here]()
 - *JSON-LD context documents*: You can see the context that we're building [here]()
-- *More info on this sprint*: head to the [wall of text below]()
-- *Want to see the work in progress?*: head to [the issue board]() to see what's happening or contribute.
+- *More info on this sprint*: head to the [wall of text below](https://github.com/IGSN/igsn_json#context)
+- *Want to see the work in progress?*: head to [the issue board](https://github.com/IGSN/igsn_json/issues) to see what's happening or contribute.
 
 ## Developing schemas and JSON-LD contexts
 
@@ -19,13 +19,6 @@ So if you want to add new terms etc, then open an issue and we can work on a pul
 
 If you're having issues or not sure where something goes or just want to ask some questions then please get in touch with one of these lovely people: Jens Klump (in Perth/Oceania time zones, [jens.klump@csiro.au](mailto:jens.klump@csiro.au), Doug Fils (in central US timezones, [drfils@gmail.com](mailto:drfils@gmail.com)) or XX (in European timezones, [firstname.lastname@host.com](firstname.lastname@host.com))
 
-## Aims of the sprint
-
-* Determine how difficult (or not) it will be for agents to make the required changes to their landing pages to conform to the new requirements and provide crawler guidance in robot.txt and sitemap.xml files.
-* Determine how difficult or not it is will be to develop new web crawlers for aggregators to aggregate data.
-* Uncover any new ways of using aggregated data that might be of interest to the community
-* Determine what services IGSN eV needs to provide to agents to support their publication role (e.g. publication of JSON Schema, JSON LD contexts etc, authentication, role-based access etc)
-
 ## Context
 
 The current implementation of IGSN is an excellent combination of lean centralised functions that are supported by federated services. This has given IGSN the ability to adapt to requirements arising from new communities joining the system. To accommodate a more diverse community of users and a much larger number of sample registrations requires a number of changes.
@@ -36,3 +29,10 @@ Under the new scheme, we propose that agents simply publish JSON documents on th
 For the relationship between agents and aggregators to work effectively, we need to outline the contract governing the relationship. In the long run, we want these roles to be as decoupled as possible, but while we are developing recommendations it would be good to have both in the room to ensure that we are balancing the needs of the two roles effectively.
 
 In this sprint we want to test and evaluate the implementation of sharing and aggregating IGSN metadata between IGSN Agents and Metadata Aggregators.
+
+### Aims of the sprint
+
+* Determine how difficult (or not) it will be for agents to make the required changes to their landing pages to conform to the new requirements and provide crawler guidance in robot.txt and sitemap.xml files.
+* Determine how difficult or not it is will be to develop new web crawlers for aggregators to aggregate data.
+* Uncover any new ways of using aggregated data that might be of interest to the community
+* Determine what services IGSN eV needs to provide to agents to support their publication role (e.g. publication of JSON Schema, JSON LD contexts etc, authentication, role-based access etc)
