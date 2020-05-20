@@ -13,3 +13,5 @@ In this sprint we want to test and evaluate the implementation of sharing and ag
 * Determine how difficult or not it is will be to develop new web crawlers for aggregators to aggregate data
 * Uncover any new ways of using aggregated data that might be of interest to the community
 * Determine what services IGSN eV needs to provide to agents to support their publication role (e.g. publication of JSON Schema, JSON LD contexts etc, authentication, role-based access etc)
+
+
