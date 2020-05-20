@@ -22,7 +22,7 @@ If you're having issues or not sure where something goes or just want to ask som
 ## Aims of the sprint
 
 * Determine how difficult (or not) it will be for agents to make the required changes to their landing pages to conform to the new requirements and provide crawler guidance in robot.txt and sitemap.xml files.
-* Determine how difficult or not it is will be to develop new web crawlers for aggregators to aggregate data
+* Determine how difficult or not it is will be to develop new web crawlers for aggregators to aggregate data.
 * Uncover any new ways of using aggregated data that might be of interest to the community
 * Determine what services IGSN eV needs to provide to agents to support their publication role (e.g. publication of JSON Schema, JSON LD contexts etc, authentication, role-based access etc)
 
