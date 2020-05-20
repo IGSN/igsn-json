@@ -24,13 +24,11 @@ We're planning on having a few video-to-video meetings over the course of the sp
 
 As we're spread all around the world getting a time that suits everyone is a bit challenging. If you can't make these we will post recordings of these here: 
 
-| ------ | ---------- | ------------------- |
 | Date   | Time (UTC) | Recorded video link |
 | ------ | ---------- | ------------------- |
 | Monday | XXXX       | TBC                 |
 | Monday | XXXX       | TBC                 |
 | Friday | XXXX       | TBC                 |
-| ------ | ---------- | ------------------- |
 
 ## Getting help
 
