@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://schema.igsn.org/json/description/materialSample/0.1/materialSample/core.json",
+    "title": "IGSN: Material sample descriptive schema",
+    "description": "Descriptive metadata schema for material science samples",
+    "type": "object"
+}

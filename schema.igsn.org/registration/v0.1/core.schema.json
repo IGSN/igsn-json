@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.igsn.org/json/registration/v0.1/core.schema.json",
+  "title": "IGSN registry metadata schema",
+  "description": "Core IGSN metadata sent to the registry",
+  "type": "object",
+  "definitions": {
+    "event": {
+      "$id": "#/event",
+      "type": "object",
+      "properties": {
+        "eventType": {
+          "type": "string",
+          "enum": [
+            "submitted",
+            "registered",
+            "updated",
+            "deprecated",
+            "destroyed"
+          ]
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "comment": {
+          "type": "string"
+        }
+      },
+      "required": ["type", "timestamp"]
+    }
+  },
+  "properties": {
+    "igsn": {
+      "$ref": "identifiers.json#/definitions/igsnPid"
+    },
+    "registrant": {
+      "type": "object",
+      "description": "The allocating agent",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the allocating agent"
+        },
+        "identifiers": {
+          "type": "array",
+          "description": "List of unique indentifiers for the allocating agent",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "identifiers.json#/definitions/viaf"
+              },
+              {
+                "$ref": "identifiers.json#/definitions/researcherId"
+              },
+              {
+                "$ref": "identifiers.json#/definitions/isni"
+              },
+              {
+                "$ref": "identifiers.json#/definitions/orcid"
+              }
+            ]
+          }
+        }
+      },
+      "required": ["name"]
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "$ref": "relationships.json#/definitions/relatedId"
+      },
+      "default": []
+    },
+    "data": {
+      "type": "object",
+      "description": "Data related to this sample"
+    },
+    "log": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/event"
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["igsn", "registrant"]
+}

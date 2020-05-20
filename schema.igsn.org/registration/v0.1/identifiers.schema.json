@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schema.igsn.org/json/registration/v0.1/identifiers.schema.json",
+  "title": "IGSN: Persistent Identifier schemas",
+  "description": "Persistent identifiers recognized within IGSN metadata",
+  "type": "object",
+
+  "definitions": {
+    "igsnPid": {
+      "description": "Formatting for IGSN PIDs",
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "A raw IGSN",
+          "pattern": "^[A-Z0-9]+$"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "An IGSN given as an IGSN URL",
+          "pattern": "^(http(s)?://)?igsn.org/[A-Z0-9]+"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "An IGSN given as a DOI reference",
+          "pattern": "^(http(s)?://)?dx.doi.org/10273/[A-Z0-9]+$"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "An IGSN given as a Handle.net reference",
+          "pattern": "^(http(s)?://)?hdl.handle.net/10273/[A-Z0-9]+$"
+        }
+      ]
+    },
+    "igsn": {
+      "description": "An IGSN is a unique persistent identifier that identifies a sample",
+      "type": "object",
+      "properties": {
+        "kind": { "const": "igsn" },
+        "id": { "$ref": "#/definitions/igsnPid" }
+      },
+      "required": ["kind", "id"]
+    },
+
+    "orcidPid": {
+      "description": "Formatting for ORCID PIDs",
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "a plain ORCID",
+          "pattern": "^([0-9]{4}[ -]?){3}[0-9]{4}$"
+        },
+        {
+          "type": "string",
+          "format": "uri",
+          "description": "a link to an ORCID landing page",
+          "pattern": "^http(s)?://orcid.com/([0-9]{4}[-]?){3}[0-9]{4}$"
+        }
+      ]
+    },
+    "orcid": {
+      "description": "An ORCID (https://en.wikipedia.org/wiki/ORCID), including a PID kind",
+      "type": "object",
+      "properties": {
+        "kind": { "const": "orcid" },
+        "id": { "$ref": "#/definitions/orcidPid" }
+      },
+      "required": ["kind", "id"]
+    },
+
+    "isniPid": {
+      "description": "Formatting for ISNI PIDs",
+      "type": "string",
+      "pattern": "^([0-9]{4}[ -]?){3}[0-9]{4}X$"
+    },
+    "isni": {
+      "description": "An International Standard Name Identifier (https://en.wikipedia.org/wiki/ISNI)",
+      "type": "object",
+      "properties": {
+        "kind": { "const": "isni" },
+        "id": { "$ref": "#/definitions/isniPid" }
+      },
+      "required": ["kind", "id"]
+    },
+
+    "researcherIdPid": {
+      "description": "Formatting for ResearcherID PIDs",
+      "type": "string",
+      "pattern": "^[A-z]-[0-9]{4}-[0-9]{4}$"
+    },
+    "researcherId": {
+      "description": "A ResearcherID (https://en.wikipedia.org/ResearcherID",
+      "type": "object",
+      "properties": {
+        "kind": { "const": "researcherId" },
+        "id": { "$ref": "#/definitions/researcherIdPid" }
+      },
+      "required": ["kind", "id"]
+    },
+
+    "viafPid": {
+      "description": "Formatting for VIAF objects",
+      "type": "string",
+      "format": "uri"
+    },
+    "viaf": {
+      "description": "A virtual international authority file (https://en.wikipedia.org/wiki/Virtual_international_authority_file)",
+      "type": "object",
+      "properties": {
+        "kind": { "const": "viaf" },
+        "id": { "$ref": "#/definitions/viafPid" }
+      },
+      "required": ["kind", "id"]
+    }
+  }
+}
