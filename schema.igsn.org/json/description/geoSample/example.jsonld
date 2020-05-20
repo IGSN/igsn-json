@@ -1,0 +1,10 @@
+[
+    {
+      "@context": "https://gitraw/file.jsonld",
+      "description": "mapes to dc terms",
+      "geo": {
+        "latitude": "40.75",
+        "longitude": "73.98"
+      }
+    }
+  ]
