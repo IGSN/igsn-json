@@ -1,0 +1,20 @@
+{
+    "@context": "http://schema.igsn.org/json/registration/v0.1/context.jsonld", 
+    "igsn": {
+        "kind": "igsn",
+        "id": "XXXCSIRO0001"  // or "igsn.org/XXXCSIRO0001"
+    },
+    "registrant": {
+        "name": "CSIRO",
+        "identifiers": [
+            {
+                "kind": "orcid",
+                "id": "0001-0001-0001-0001"
+            },
+            {
+                "kind": "viaf",
+                "id": "https://csiro.au/viaf.file"
+            }
+        ]
+    }
+}

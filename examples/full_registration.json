@@ -1,0 +1,66 @@
+
+{
+    "@context": "http://schema.igsn.org/json/registration/v0.1/context.jsonld", 
+    "igsn": {
+        "kind": "igsn",
+        "id": "XXXCSIRO0001"  // or "igsn.org/XXXCSIRO0001"
+    },
+    "registrant": {
+        "name": "CSIRO",
+        "identifiers": [
+            {
+                "kind": "orcid",
+                "id": "0001-0001-0001-0001"
+            },
+            {
+                "kind": "viaf",
+                "id": "https://csiro.au/viaf.file"
+            }
+        ]
+    },
+    "related": [  // todo flesh this out in the schema
+        {
+            "otherId": {
+                "id": "https://igsn.org/XXXCSIRO0002",
+                "kind": "igsn"
+            },  // or a plain URL
+            "relationshipType": "something_controlled"
+        },
+        {
+            "otherID": "https://some_host.org/some_id",
+            "relationshipType": "some_other_relationship"
+        }
+    ],
+    "log": [
+        {
+            "eventType": "submitted",
+            "timestamp": "a_time",  // needs to be proper timestamps
+            "comment": "This was submitted by XX"
+        },
+        {
+            "eventType": "registered",
+            "timestamp": "some_time"
+        },
+        {
+            "eventType": "updated",
+            "timestamp": "Some_other_time",
+            "comment": "Updated description"
+        }
+    ],
+    "description": {
+        "@context": "http://some_community.org/context.jsonld",
+        "sampleType": "rock",
+        "collector": "Doug Fils",
+        "curator": "Jess Robertson",
+        "sampling_info": {
+            "@context": "http://w3c.org/sosa.context",
+            "samplingTime": "april_fools",
+            "geometry": [
+                {
+                    "type": "Polygon",
+                    "xy": [[1, 2], [3, 4], [1, 0]]
+                }
+            ]
+        }
+    }
+}
