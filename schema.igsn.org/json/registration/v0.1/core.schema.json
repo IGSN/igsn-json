@@ -85,5 +85,5 @@
       "minItems": 1
     }
   },
-  "required": ["igsn", "registrant"]
+  "required": ["@context", "igsn", "registrant"]
 }
