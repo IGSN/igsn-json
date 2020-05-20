@@ -22,7 +22,7 @@ So if you want to add new terms etc, then open an issue and we can work on a pul
 
 We're planning on having a few video-to-video meetings over the course of the sprint. Please email [XXX](firstname.lastname@example.com) for the meeting links. 
 
-As we're spread all around the world getting a time that suits everyone is a bit challenging. If you can't make these we will post recordings of these heree: 
+As we're spread all around the world getting a time that suits everyone is a bit challenging. If you can't make these we will post recordings of these here: 
 
 | ------ | ---------- | ------------------- |
 | Date   | Time (UTC) | Recorded video link |
