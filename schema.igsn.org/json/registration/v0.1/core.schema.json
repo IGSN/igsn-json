@@ -31,7 +31,7 @@
     }
   },
   "properties": {
-    "@context": "http://schema.igsn.org/json/registration/v0.1/context.jsonld",
+    "@context": { "const": "http://schema.igsn.org/json/registration/v0.1/context.jsonld" },
     "igsn": {
       "$ref": "identifiers.schema.json#/definitions/igsnPid"
     },
