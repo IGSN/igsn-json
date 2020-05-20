@@ -8,6 +8,9 @@ Here's a list of important things in this repository to get you going quickly:
 - *JSON-LD context documents*: You can see the context that we're building [here]()
 - *More info on this sprint*: head to the [wall of text below](https://github.com/IGSN/igsn_json#context)
 - *Want to see the work in progress?*: head to [the issue board](https://github.com/IGSN/igsn_json/issues) to see what's happening or contribute.
+- *Original IGSN docs*: [these have a lot of info](https://igsn.github.io/) on IGSN metadata, justifications for the core fields etc. 
+
+Otherwise feel free to dive in and get your hands dirty. We're all making it up as we go along so don't feel like you've got to know what you're saying before asking a question. 
 
 ## Developing schemas and JSON-LD contexts
 
@@ -15,9 +18,25 @@ We're going to build out the shared schemas and contexts in this repo - all of t
 
 So if you want to add new terms etc, then open an issue and we can work on a pull request. If you're not sure about the code side then just open an issue in this repo and we'll find some people that know what to do to help you out.
 
+## Meeting schedule
+
+We're planning on having a few video-to-video meetings over the course of the sprint. Please email [XXX](firstname.lastname@example.com) for the meeting links. 
+
+As we're spread all around the world getting a time that suits everyone is a bit challenging. If you can't make these we will post recordings of these heree: 
+
+| ------ | ---------- | ------------------- |
+| Date   | Time (UTC) | Recorded video link |
+| ------ | ---------- | ------------------- |
+| Monday | XXXX       | TBC                 |
+| Monday | XXXX       | TBC                 |
+| Friday | XXXX       | TBC                 |
+| ------ | ---------- | ------------------- |
+
 ## Getting help
 
-If you're having issues or not sure where something goes or just want to ask some questions then please get in touch with one of these lovely people: Jens Klump (in Perth/Oceania time zones, [jens.klump@csiro.au](mailto:jens.klump@csiro.au), Doug Fils (in central US timezones, [drfils@gmail.com](mailto:drfils@gmail.com)) or XX (in European timezones, [firstname.lastname@host.com](firstname.lastname@host.com))
+If something's not clear, raise an issue in the [issue tracker](https://github.com/IGSN/igsn_json/issues).
+
+If you're not sure where something goes or you'd rather talk to a human than Octocat then please get in touch with one of these lovely people: Jens Klump (in Perth/Oceania time zones, [jens.klump@csiro.au](mailto:jens.klump@csiro.au), Doug Fils (in central US timezones, [drfils@gmail.com](mailto:drfils@gmail.com)) or XX (in European timezones, [firstname.lastname@host.com](firstname.lastname@host.com))
 
 ## Context
 
