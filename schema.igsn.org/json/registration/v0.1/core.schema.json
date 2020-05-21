@@ -71,7 +71,7 @@
     "related": {
       "type": "array",
       "items": {
-        "$ref": "relationships.schema.json#/definitions/relatedId"
+        "$ref": "relatedIdentifier.schema.json"
       },
       "default": []
     },
