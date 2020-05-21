@@ -59,7 +59,9 @@ Launching subshell in virtual environment...
 # do whatever you were going to do in the new shell
 ```
 
-## Core IGSN Metadata
+## IGSN Metadata structure
+
+IGSN metadata is split into registration (or core) metadata, which is very minimal, and descriptive (or community) metadata, which containst all the actual 'information' about a sample such as scientific observations, sampling locations etc. 
 
 
 
