@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://schema.igsn.org/json/registration/v0.1/relationships.schema.json",
+  "title": "IGSN related identifier schema",
+  "description": "Describes the structure of related identifiers for an IGSN",
+  "type": "object",
+  "definitions": {},
+  "properties": {
+    "identifier": { "$ref": "identifiers.schema.json" },
+    "relationType": {
+      "type": "string",
+      "enum": [
+        "isCitedBy",
+        "isPartOf",
+        "hasPart",
+        "isReferencedBy",
+        "references",
+        "isDocumentedBy",
+        "documents",
+        "isCompliedBy",
+        "compiles",
+        "isVariantFormOf",
+        "isOriginalFormOf"
+      ]
+    }
+  }
+}
