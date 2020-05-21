@@ -89,6 +89,10 @@ def validator(registration_schema_folder):
 def test_igsn_registration(validator, obj, should_pass):
     "Sanity checking for basic IGSN registration inputs."
     try:
+        # Inject required IGSN registration context
+        obj['@context'] = "http://schema.igsn.org/json/registration/v0.1/context.jsonld"
+
+        # Check validation (or not...)
         validator(obj)
         if not should_pass:
             raise AssertionError(f"Object {obj} unexpectedly validated")
