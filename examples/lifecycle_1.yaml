@@ -1,0 +1,95 @@
+# title: lifecycle_1.yaml
+# description: >
+#   An example showing an evolution of a sample over time - a tooth in a museum
+#   
+
+--- # tooth 
+
+'@context': http://schema.igsn.org/json/registration/v0.1/context.jsonld
+
+igsn:
+  kind: igsn
+  id: XXXMFO0001
+
+registrant:
+  name: Museum of Fictional Objects
+  identifiers:
+    - 
+      kind: uri
+      id: https://mfo.org
+    - 
+      kind: orcid 
+      id: 9999-9999-9999-9999
+
+related:
+  - 
+    identifier:
+      id: https://igsn.org/XXXMFO002 
+      kind: igsn 
+    relationshipType: isPartOf
+
+description:
+  '@context': http://schema.mfo.org/specimens/context.jsonld
+  sampleDescription: >
+    An interesting tooth collected from Lake Mungo in Australia 
+    by the ANU archeology team. 
+
+  stratigraphicLocation: 
+    kind: igsn
+    id: XXXMFO0002
+    relationship: conformal
+  
+  photograph: http://photos.mfo.org/lake_mungo_tooth.png
+
+  mfoId: 508.93
+  mfoLocation: Stack 4, part b
+
+log:
+- 
+  eventType: submitted
+  timestamp: 2020-05-22 06:41:04
+  comment: Initial submission from the field by archeology team
+-
+  eventType: registered
+  timestamp: 2020-05-22 06:41:32
+  comment: Sample registered by MFO with IGSN
+
+--- # horizon sample
+
+# Registration of the sediment horizon
+'@context': http://schema.igsn.org/json/registration/v0.1/context.jsonld
+
+igsn:
+  kind: igsn
+  id: XXXMFO0002 
+
+registrant:
+  $ref: http://igsn.org/XXXMFO001#registrant
+
+description:
+  '@context': http://schema.igsn.org/json/description/geosamples/v0.1/context.jsonld
+  description: A sample of 'A' horizon in Lake Mungo, Australia 
+
+  sampleType: sediment
+  collector: ANU archeology team
+  curator: Early Australia branch, MFO
+  
+  isSampleOf:
+    kind: uri 
+    id: https://ga.gov.au/waterbodies/lake_mungo
+
+  samplingLocation:
+    '@context': https://geojson.org/geojson-ld/geojson-context.jsonld
+    geometry:
+      type: Point
+      coordinates: [143.055385, -33.715259]
+
+log:
+- 
+  eventType: submitted
+  timestamp: 2020-05-22 06:41:04
+  comment: Initial submission from the field by archeology team
+-
+  eventType: registered
+  timestamp: 2020-05-22 06:41:32
+  comment: Sample registered by MFO with IGSN
