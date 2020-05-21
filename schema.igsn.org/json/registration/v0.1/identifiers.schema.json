@@ -6,7 +6,7 @@
   "type": "object",
 
   "definitions": {
-    "urid": {
+    "uriId": {
       "description": "Formatting for raw URL PIDs",
       "type": "object",
       "properies": {
@@ -129,7 +129,7 @@
   },
   "anyOf": [
     {
-      "$ref": "#/definitions/uri"
+      "$ref": "#/definitions/uriId"
     },
     {
       "$ref": "#/definitions/igsn"
