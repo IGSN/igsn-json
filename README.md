@@ -53,3 +53,50 @@ In this sprint we want to test and evaluate the implementation of sharing and ag
 * Determine how difficult or not it is will be to develop new web crawlers for aggregators to aggregate data.
 * Uncover any new ways of using aggregated data that might be of interest to the community
 * Determine what services IGSN eV needs to provide to agents to support their publication role (e.g. publication of JSON Schema, JSON LD contexts etc, authentication, role-based access etc)
+
+## Developing schemas and running tests
+
+We're using some lightweight checks with pytest as a testing harness. Take a look at the python files in the [tests](https://github.com/IGSN/igsn_json/tree/master/tests) folder for how these work. Basically we just fire a bunch of JSON fragments that should validate against our schemas. This has the bonus of checking that all our JSON references etc are correct.
+
+We're using [pipenv]() to manage the Python environment and dependencies. To install pipenv just do 
+
+```bash
+pip install pipenv
+```
+
+and then you can install the environment with 
+
+```bash
+pipenv install --dev
+```
+
+Pipenv creates an isolated environment for you - you will need to run pytest inside of this. To do this, just do
+
+```bash
+$ cd /path/to/igsn_json
+$ pipenv run python -m pytest
+================================== test session starts =================================== 
+platform win32 -- Python 3.7.5, pytest-5.4.2, py-1.8.1, pluggy-0.13.1 -- c:\users\jesse\.virtualenvs\igsn_json-uu6qpojl\scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\jesse\OneDrive\Documents\IGSN\igsn_json, inifile: setup.cfg
+collected 10 items                                                                         
+
+tests/test_registration_schema.py::test_igsn_registration[obj0-True] PASSED         [ 10%] 
+tests/test_registration_schema.py::test_igsn_registration[obj1-False] PASSED        [ 20%] 
+tests/test_registration_schema.py::test_igsn_registration[obj2-False] PASSED        [ 30%] 
+tests/test_registration_schema.py::test_igsn_registration[obj3-False] PASSED        [ 40%] 
+tests/test_registration_schema.py::test_igsn_registration[obj4-True] PASSED         [ 50%] 
+tests/test_registration_schema.py::test_igsn_registration[obj5-True] PASSED         [ 60%] 
+tests/test_registration_schema.py::test_igsn_registration[obj6-True] PASSED         [ 70%] 
+tests/test_registration_schema.py::test_igsn_registration[obj7-False] PASSED        [ 80%] 
+tests/test_registration_schema.py::test_igsn_registration[obj8-True] PASSED         [ 90%] 
+tests/test_registration_schema.py::test_igsn_registration[obj9-True] PASSED         [100%] 
+
+- generated xml file: C:\Users\jesse\OneDrive\Documents\IGSN\igsn_json\tests\reports\test-output.junit.xml -
+=================================== 10 passed in 1.30s =================================== 
+
+```
+
+in the root folder of the repository.
+
+We're also using [Travis](xx) (need to update the Travis link once public) to automatically check pull requests, so you may get asked to clean things up if your tests are failing before we can merge your contribution. If you've got any questions about this just ping [@jesserobertson](https://github.com/jesserobertson).
