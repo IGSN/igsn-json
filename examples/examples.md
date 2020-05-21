@@ -41,6 +41,24 @@ $ python convert.py minimal_registration.yaml | jq '.registratnt.identifiers[].k
 "uri"
 ```
 
+You need to install click and pyyaml for this to work. You can get all of these using the Pipfile in the root directory:
+
+```bash
+$ cd path/to/igsn_json
+$ pipenv install  # or pipenv install --dev for all the dev tools
+Installing dependencies from Pipfile.lock (e3dedb)…
+  ============================---- 8/9 - 00:00:05
+...
+```
+
+Once installed, you can run the scripts in an isolated environment with the `pipenv shell` command.
+
+```bash
+$ pipenv shell
+Launching subshell in virtual environment...
+# do whatever you were going to do in the new shell
+```
+
 ## Core IGSN Metadata
 
 
@@ -53,4 +71,5 @@ The `data` key can contain any extra information about a sample
 
 ### Semantic context from JSON-LD
 
-- Pointing to another JSON-LD 
+- Pointing to an IGSN context
+- Pointing to another JSON-LD context 
