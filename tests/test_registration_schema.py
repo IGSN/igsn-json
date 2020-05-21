@@ -21,7 +21,7 @@ def validator(registration_schema_folder):
     [
         (
             {
-                "igsn": "https://igsn.org/FOOTEST234",
+                "igsn": "https://igsn.org/XXXTEST234",
                 "registrant": {
                     "name": "Jess Robertson",
                     "identifiers": [
@@ -32,20 +32,20 @@ def validator(registration_schema_folder):
             },
             True,
         ),
-        ({"igsn": "https://igsn.org/FOOTEST234"}, False),
+        ({"igsn": "https://igsn.org/XXXTEST234"}, False),
         ({"registrant": {"name": "jess"}}, False),
-        ({"igsn": "https://igsn.org/FOOTEST234", "registrant": "jess"}, False),
-        ({"igsn": "https://igsn.org/FOOTEST234", "registrant": {"name": "jess"}}, True),
+        ({"igsn": "https://igsn.org/XXXTEST234", "registrant": "jess"}, False),
+        ({"igsn": "https://igsn.org/XXXTEST234", "registrant": {"name": "jess"}}, True),
         (
             {
-                "igsn": "https://igsn.org/FOOTEST234",
+                "igsn": "https://igsn.org/XXXTEST234",
                 "registrant": {"name": "jess", "identifiers": []},
             },
             True,
         ),
         (
             {
-                "igsn": "https://igsn.org/FOOTEST234",
+                "igsn": "https://igsn.org/XXXTEST234",
                 "registrant": {"name": "jess"},
                 "related": [],
             },
@@ -53,7 +53,7 @@ def validator(registration_schema_folder):
         ),
         (
             {
-                "igsn": "https://igsn.org/FOOTEST234",
+                "igsn": "https://igsn.org/XXXTEST234",
                 "registrant": {"name": "jess"},
                 "related": ["foo"],
             },
@@ -61,7 +61,7 @@ def validator(registration_schema_folder):
         ),
         (
             {
-                "igsn": "https://igsn.org/FOOTEST234",
+                "igsn": "https://igsn.org/XXXTEST234",
                 "registrant": {"name": "jess"},
                 "related": [
                     {"kind": "igsn", "id": "FOOTEST235", "relationship": "isPartOf"}
@@ -71,7 +71,7 @@ def validator(registration_schema_folder):
         ),
         (
             {
-                "igsn": "https://igsn.org/FOOTEST234",
+                "igsn": "https://igsn.org/XXXTEST234",
                 "registrant": {"name": "jess"},
                 "related": [
                     {"kind": "igsn", "id": "FOOTEST235", "relationship": "isPartOf"},
