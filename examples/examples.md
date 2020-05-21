@@ -61,9 +61,7 @@ Launching subshell in virtual environment...
 
 ## IGSN Metadata structure
 
-IGSN metadata is split into registration (or core) metadata, which is very minimal, and descriptive (or community) metadata, which containst all the actual 'information' about a sample such as scientific observations, sampling locations etc. 
-
-
+IGSN metadata is split into registration (or core) metadata, which is very minimal, and descriptive (or community) metadata, which containst all the actual 'information' about a sample such as scientific observations, sampling locations etc.
 
 ## Custom data about a sample
 
@@ -74,4 +72,4 @@ The `data` key can contain any extra information about a sample
 ### Semantic context from JSON-LD
 
 - Pointing to an IGSN context
-- Pointing to another JSON-LD context 
+- Pointing to another JSON-LD context
