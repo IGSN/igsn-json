@@ -6,6 +6,7 @@ import pytest
 ROOT = Path(__file__).parent.parent.absolute()
 print(f"Schema root at {ROOT}")
 
+
 @pytest.fixture()
 def registration_schema_folder():
     "Get the location of the given schema folder."
