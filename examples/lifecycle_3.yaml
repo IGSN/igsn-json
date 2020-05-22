@@ -146,6 +146,10 @@ log:
 
 '@context': http://schema.igsn.org/json/registration/v0.1/context.jsonld
 
+igsn:
+  kind: igsn
+  id: XXXCSIRO001
+
 registrant:
   name: Commonwealth Scientific and Industrial Research Organization
   identifiers:
@@ -204,3 +208,7 @@ log:
     eventType: destroyed 
     timestamp: 2020-05-22 07:45:38
     comment: This sample has been destroyed in testing
+  - 
+    eventType: updated
+    timestamp: 2020-05-22 14:54:07
+    comment: Updated with measurement info
