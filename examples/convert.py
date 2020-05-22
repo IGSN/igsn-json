@@ -26,9 +26,13 @@ def datetime_handler(obj):
 @click.argument("source", type=click.File("r"))
 def main(source, indent):
     "Convert a YAML file to pretty JSON"
-    data = yaml.load(source, Loader=Loader)
-    output = json.dumps(data, indent=indent, default=datetime_handler)
-    click.echo(output)
+    click.echo(
+        json.dumps(
+            list(yaml.load_all(source, Loader=Loader)),
+            indent=indent,
+            default=datetime_handler,
+        )
+    )
 
 
 if __name__ == "__main__":
