@@ -7,7 +7,7 @@ Here's a list of important things in this repository to get you going quickly:
 - _Example metadata documents_ - you can see some examples (in YAML with annotations, and in JSON) in [this folder here](https://github.com/IGSN/igsn-json/blob/master/examples/examples.md)
 - _JSONSchema and JSON-LD documents_ If you want to validate your JSON documents against a schema then you can [find them here for registration metadata](https://github.com/IGSN/igsn-json/tree/master/schema.igsn.org/json/registration/v0.1). We also have some demo 'community schemas' for [descriptive metadata here](https://github.com/IGSN/igsn-json/tree/master/schema.igsn.org/json/description)
 - _More info on this sprint_: head to the [wall of text below](https://github.com/IGSN/igsn_json#context)
-- _Want to see the work in progress?_: head to [the issue board](https://github.com/IGSN/igsn-json/issues) to see what's happening or contribute.
+- _Want to see the work in progress?_: head to the [team discussion site](https://github.com/orgs/IGSN/teams/igsn-2040-sprint), or [the issue board](https://github.com/IGSN/igsn-json/issues) to see what's happening or contribute.
 - _Original IGSN docs_: [these have a lot of info](https://igsn.github.io/) on IGSN metadata, justifications for the core fields etc.
 
 Otherwise feel free to dive in and get your hands dirty. We're all making it up as we go along so don't feel like you've got to know what you're saying before asking a question.
