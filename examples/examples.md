@@ -66,13 +66,13 @@ registrant:
       id: https://csiro.au
 ```
 
-You can see a version with extra comments for all the fields here: [minimal_registraion.yaml](https://github.com/IGSN/igsn_json/blob/master/examples/minimal_registration.yaml), and a JSON transpilation here [minimal_registration.json](https://github.com/IGSN/igsn_json/blob/master/examples/minimal_registration.json) (which is how it would come off the server).
+You can see a version with extra comments for all the fields here: [minimal_registraion.yaml](https://github.com/IGSN/igsn-json/blob/master/examples/minimal_registration.yaml), and a JSON transpilation here [minimal_registration.json](https://github.com/IGSN/igsn-json/blob/master/examples/minimal_registration.json) (which is how it would come off the server).
 
 ## Full registration - extra registration metadata
 
 Obviously an identifier by itself isn't very useful - we want to be able to add extra information which will allow us to link this sample to descriptive information and to other samples and entities.
 
-There is an annotated YAML document for this example here: [full_registration.yaml](https://github.com/IGSN/igsn_json/blob/master/examples/full_registration.yaml) and in JSON: [full_registration.json](https://github.com/IGSN/igsn_json/blob/master/examples/full_registration.json)
+There is an annotated YAML document for this example here: [full_registration.yaml](https://github.com/IGSN/igsn-json/blob/master/examples/full_registration.yaml) and in JSON: [full_registration.json](https://github.com/IGSN/igsn-json/blob/master/examples/full_registration.json)
 
 ### Extra registration fields
 
@@ -96,7 +96,7 @@ related:
     relationship: "documentedBy"
 ```
 
-The `relationshipType` field is controlled in an enumeration in the [`relatedIdentifier.schema.json` document](https://github.com/IGSN/igsn_json/blob/master/schema.igsn.org/json/registration/v0.1/relatedIdentifier.schema.json#L11). This is pretty minimal at this stage and needs to be expanded with our communities' help.
+The `relationshipType` field is controlled in an enumeration in the [`relatedIdentifier.schema.json` document](https://github.com/IGSN/igsn-json/blob/master/schema.igsn.org/json/registration/v0.1/relatedIdentifier.schema.json#L11). This is pretty minimal at this stage and needs to be expanded with our communities' help.
 
 The log contains information about changes to the sample metadata:
 
@@ -113,7 +113,7 @@ log:
     comment: Sample description updated by Jess
 ```
 
-Here we show when the sample was submitted, when it was registered with the central IGSN registry, and then when I updated the descriptive metadata. The eventTypes are controlled with an enumeration in the [`core.schema.json` JSONSchema document](https://github.com/IGSN/igsn_json/blob/master/schema.igsn.org/json/registration/v0.1/core.schema.json#L14)
+Here we show when the sample was submitted, when it was registered with the central IGSN registry, and then when I updated the descriptive metadata. The eventTypes are controlled with an enumeration in the [`core.schema.json` JSONSchema document](https://github.com/IGSN/igsn-json/blob/master/schema.igsn.org/json/registration/v0.1/core.schema.json#L14)
 
 ## Descriptive metadata
 
@@ -156,3 +156,5 @@ This lets us use different meanings for the `coordinates` property in the `obser
 ## The lifecycle of a sample
 
 To show how all these parts fit together to give rich sample metadata across organizations, we'll make up a little story about a tooth discovered in Lake Mungo in Australia (acutally this is pretty close to real science but told from a non-expert point of view).
+
+> Note that we're glomming several YAML files into a single one for this example for clarity. These would normally be seperate docuements/resources on the server. If you use the convert.py command to convert these to JSON the script will glom them all into an array.

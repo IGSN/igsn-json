@@ -4,10 +4,10 @@ Welcome to the test schema repo for the IGSN 2040 Architecture Sprint!
 
 Here's a list of important things in this repository to get you going quickly:
 
-- _Example metadata documents_ - you can see some examples (in YAML with annotations, and in JSON) in [this folder here](https://github.com/IGSN/igsn_json/blob/master/examples/examples.md)
-- _JSONSchema and JSON-LD documents_ If you want to validate your JSON documents against a schema then you can [find them here for registration metadata](https://github.com/IGSN/igsn_json/tree/master/schema.igsn.org/json/registration/v0.1). We also have some demo 'community schemas' for [descriptive metadata here](https://github.com/IGSN/igsn_json/tree/master/schema.igsn.org/json/description)
+- _Example metadata documents_ - you can see some examples (in YAML with annotations, and in JSON) in [this folder here](https://github.com/IGSN/igsn-json/blob/master/examples/examples.md)
+- _JSONSchema and JSON-LD documents_ If you want to validate your JSON documents against a schema then you can [find them here for registration metadata](https://github.com/IGSN/igsn-json/tree/master/schema.igsn.org/json/registration/v0.1). We also have some demo 'community schemas' for [descriptive metadata here](https://github.com/IGSN/igsn-json/tree/master/schema.igsn.org/json/description)
 - _More info on this sprint_: head to the [wall of text below](https://github.com/IGSN/igsn_json#context)
-- _Want to see the work in progress?_: head to [the issue board](https://github.com/IGSN/igsn_json/issues) to see what's happening or contribute.
+- _Want to see the work in progress?_: head to [the issue board](https://github.com/IGSN/igsn-json/issues) to see what's happening or contribute.
 - _Original IGSN docs_: [these have a lot of info](https://igsn.github.io/) on IGSN metadata, justifications for the core fields etc.
 
 Otherwise feel free to dive in and get your hands dirty. We're all making it up as we go along so don't feel like you've got to know what you're saying before asking a question.
@@ -32,7 +32,7 @@ As we're spread all around the world getting a time that suits everyone is a bit
 
 ## Getting help
 
-If something's not clear, raise an issue in the [issue tracker](https://github.com/IGSN/igsn_json/issues).
+If something's not clear, raise an issue in the [issue tracker](https://github.com/IGSN/igsn-json/issues).
 
 If you're not sure where something goes or you'd rather talk to a human than Octocat then please get in touch with one of these lovely people: Jens Klump (in Perth/Oceania time zones, [jens.klump@csiro.au](mailto:jens.klump@csiro.au), Doug Fils (in central US timezones, [drfils@gmail.com](mailto:drfils@gmail.com)) or XX (in European timezones, [firstname.lastname@host.com](firstname.lastname@host.com))
 
@@ -56,7 +56,7 @@ In this sprint we want to test and evaluate the implementation of sharing and ag
 
 ## Developing schemas and running tests
 
-We're using some lightweight checks with pytest as a testing harness. Take a look at the python files in the [tests](https://github.com/IGSN/igsn_json/tree/master/tests) folder for how these work. Basically we just fire a bunch of JSON fragments that should validate against our schemas. This has the bonus of checking that all our JSON references etc are correct.
+We're using some lightweight checks with pytest as a testing harness. Take a look at the python files in the [tests](https://github.com/IGSN/igsn-json/tree/master/tests) folder for how these work. Basically we just fire a bunch of JSON fragments that should validate against our schemas. This has the bonus of checking that all our JSON references etc are correct.
 
 We're using [pipenv](https://pipenv.pypa.io/en/latest/) to manage the Python environment and dependencies. To install pipenv just do
 
