@@ -11,10 +11,20 @@ python:
 
 env:
   global:
-    - PIPENV_VENV_IN_PROJECT=1
+    # WORKON_HOME sets where pipenv will place the virtualenv. We do this so that we can capture
+    #  the environment in the cache for gitlab-ci.
+    #  PIP_CACHE_DIR tells pip to cache our pip packages in the same path, so that we also
+    #  cache the downloads.
+    - WORKON_HOME=".pipenv/venvs"
+    - PIP_CACHE_DIR=".pipenv/cache"
+
+    # Set up other variables
     - LC_ALL=C.UTF-8
     - LANG=C.UTF-8
-    - PIPENV_IGNORE_VIRTUALENVS=1
+
+cache:
+  directories:
+  - .pipenv
 
 install:
   # Install everything with our pipenv
