@@ -176,7 +176,7 @@ registrant:
 description:
   "@context": http://schema.mfo.org/specimens/context.jsonld
   sampleDescription: >
-    An interesting tooth collected from Lake Mungo in Australia 
+    An interesting tooth collected from Lake Mungo in Australia
     by the ANU archeology team.
 
   stratigraphicLocation:
@@ -244,8 +244,15 @@ related:
 ```
 
 > Note, to save space we're just showing the properties which are added as we go. You ou can see all the data for this step in [lifecycle_1.yaml](https://github.com/IGSN/igsn-json/blob/master/examples/lifecycle_1.yaml).
-
-> We're combining several YAML files into a single one for this example for clarity. These would normally be seperate docuements/resources on the server. If you use the `convert.py` script to convert these to JSON it will glom them all into an array.
+>
+> We're also combining several YAML files into a single one for this example for clarity. These would normally be seperate docuements/resources on the server. If you use the `convert.py` script to convert these to JSON it will glom them all into an array. For example here we pull the IGSN out of each document:
+>
+> ```bash
+> $ python convert.py lifecycle_3.yaml | jq '.[].igsn.id'
+> "XXXMFO0001"
+> "XXXMFO0002"
+> "XXXCSIRO001"
+> ```
 
 ### Step 2: Sample dating
 
