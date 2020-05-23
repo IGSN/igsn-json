@@ -20,21 +20,21 @@ So if you want to add new terms etc, then open an issue and we can work on a pul
 
 ## Meeting schedule
 
-We're planning on having a few video-to-video meetings over the course of the sprint. Please email [XXX](firstname.lastname@example.com) for the meeting links.
+We're planning on having a few video-to-video meetings over the course of the sprint. Please email [Sarah Ramdeen](sramdeen@ldeo.columbia.edu) for the meeting links.
 
 As we're spread all around the world getting a time that suits everyone is a bit challenging. If you can't make these we will post recordings of these here:
 
-| Date   | Time (UTC) | Recorded video link |
-| ------ | ---------- | ------------------- |
-| Monday | XXXX       | TBC                 |
-| Monday | XXXX       | TBC                 |
-| Friday | XXXX       | TBC                 |
+| Date            | Time (UTC) | Recorded video link |
+| --------------- | ---------- | ------------------- |
+| Monday May 25   | 10am       | TBC                 |
+| Monday June 1st | 10am       | TBC                 |
+| Friday June 5th | 10am       | TBC                 |
 
 ## Getting help
 
 If something's not clear, raise an issue in the [issue tracker](https://github.com/IGSN/igsn-json/issues).
 
-If you're not sure where something goes or you'd rather talk to a human than Octocat then please get in touch with one of these lovely people: Jens Klump (in Perth/Oceania time zones, [jens.klump@csiro.au](mailto:jens.klump@csiro.au), Doug Fils (in central US timezones, [drfils@gmail.com](mailto:drfils@gmail.com)) or XX (in European timezones, [firstname.lastname@host.com](firstname.lastname@host.com))
+If you're not sure where something goes or you'd rather talk to a human than Octocat then please get in touch with one of these lovely people: Jens Klump (in Perth/Oceania time zones, [jens.klump@csiro.au](mailto:jens.klump@csiro.au), Doug Fils (in central US timezones, [drfils@gmail.com](mailto:drfils@gmail.com)) or Anusuriya Devaraju (in European timezones, [adevaraju@marum.de](adevaraju@marum.de))
 
 ## Context
 
