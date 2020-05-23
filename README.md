@@ -1,5 +1,7 @@
 # IGSN JSON development for the IGSN 2040 Sprint 1 (May/June 2020)
 
+[![Build Status](https://travis-ci.org/IGSN/igsn-json.svg?branch=master)](https://travis-ci.org/IGSN/igsn-json)
+
 Welcome to the test schema repo for the IGSN 2040 Architecture Sprint!
 
 Here's a list of important things in this repository to get you going quickly:
