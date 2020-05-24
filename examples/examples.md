@@ -52,9 +52,7 @@ This is the minimal set of metadata required to define an IGSN - the `registrant
 
 ```yaml
 "@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
-igsn:
-  kind: igsn
-  id: XXXCSIRO0001
+igsn: XXXCSIRO0001
 registrant:
   name: CSIRO
   identifiers:
@@ -163,9 +161,7 @@ We'll say that an archeology team from ANU, in collaboration with the Museum of 
 
 ```yaml
 "@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
-igsn:
-  kind: igsn
-  id: XXXMFO0001
+igsn: XXXMFO0001
 registrant:
   name: Museum of Fictional Objects
   identifiers:
@@ -202,9 +198,7 @@ The team have also sampled the stratigraphic horizon that this tooth was found i
 
 ```yaml
 "@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
-igsn:
-  kind: igsn
-  id: XXXMFO0002
+igsn: XXXMFO0002
 registrant:
   $ref: http://igsn.org/XXXMFO001#registrant
 description:
@@ -299,9 +293,7 @@ Now that they know the age of the animal tooth, the team decides they'd like to 
 
 ```yaml
 "@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
-igsn:
-  kind: igsn
-  id: XXXCSIRO001
+igsn: XXXCSIRO001
 registrant:
   name: Commonwealth Scientific and Industrial Research Organization
   identifiers:
