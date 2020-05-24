@@ -1,19 +1,6 @@
 # Design some examples
 import pytest
-import jsonref as json
-from fastjsonschema import compile as compile_schema, JsonSchemaException
-
-
-@pytest.fixture()
-def validator(registration_schema_folder):
-    "Load up the registration validator."
-    schema_file = registration_schema_folder / "core.schema.json"
-    with open(schema_file, "r", encoding="utf-8") as src:
-        # Here we're using jsonref to dereference local files for dev purposes
-        # in production these will all need to be replaced with
-        # dereferencable URIs
-        schema = json.load(src, base_uri=schema_file.as_uri())
-        return compile_schema(schema)
+from fastjsonschema import JsonSchemaException
 
 
 @pytest.mark.parametrize(
@@ -90,7 +77,7 @@ def test_igsn_registration(validator, obj, should_pass):
     "Sanity checking for basic IGSN registration inputs."
     try:
         # Inject required IGSN registration context
-        obj['@context'] = "http://schema.igsn.org/json/registration/v0.1/context.jsonld"
+        obj["@context"] = "http://schema.igsn.org/json/registration/v0.1/context.jsonld"
 
         # Check validation (or not...)
         validator(obj)
