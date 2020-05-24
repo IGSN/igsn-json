@@ -8,6 +8,8 @@ import pytest
 SCHEMA_FOLDER = Path(__file__).parent.parent / "schema.igsn.org" / "json"
 TO_CHECK = [
     SCHEMA_FOLDER / "description" / "geoSample" / "v0.1",
+    SCHEMA_FOLDER / "description" / "bioSample" / "v0.1",
+    SCHEMA_FOLDER / "description" / "materialSample" / "v0.1",
     SCHEMA_FOLDER / "registration" / "v0.1",
 ]
 SCHEMAS = []
@@ -16,8 +18,7 @@ for directory in TO_CHECK:
 
 
 def test_folders_exist():
-    for directory in TO_CHECK:
-        assert directory.exists()
+    assert SCHEMA_FOLDER.exists()
 
 
 @pytest.mark.parametrize("schema", SCHEMAS)
