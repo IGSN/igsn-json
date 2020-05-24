@@ -44,7 +44,14 @@ def test_json_validates(registration_validator, name, document):
     try:
         registration_validator(document)
     except JsonSchemaException as exc:
-        raise ValueError(f'Document {name}.json failed to validate.\n\nError was:\n{exc.message}')
+        msg = f"Document {name}.json failed to validate.\n\nError was:\n{exc.message}"
+
+        # Add in the value and rule for debugging purposes
+        msg += "\nBad value is:\n" + json.dumps(exc.value, indent=4)
+        msg += "\n...at path: " + str(exc.path)
+        msg += f"\nRule is {exc.rule}:\n" + json.dumps(exc.rule_definition, indent=4)
+
+        raise ValueError(msg)
 
 
 # Include our conversion code here
@@ -79,3 +86,7 @@ def test_yaml_json_equal(yaml_file, json_file):
 
     # Check the two are the same
     assert json_str == yaml_json_str
+
+
+if __name__ == '__main__':
+    pytest.main()

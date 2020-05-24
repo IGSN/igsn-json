@@ -1,43 +1,40 @@
 # title: lifecycle_2.yaml
 # description: >
 #   An example showing an evolution of a sample over time - a tooth in a museum
-#   Here we've had the soil horizon dated and updated the age of the 
+#   Here we've had the soil horizon dated and updated the age of the
 #   tooth and the horizon
 
---- # tooth 
+--- # tooth
 
-'@context': http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
 
 igsn: XXXMFO0001
 
 registrant:
   name: Museum of Fictional Objects
   identifiers:
-    - 
-      kind: uri
+    - kind: uri
       id: https://mfo.org
-    - 
-      kind: orcid 
+    - kind: orcid
       id: 9999-9999-9999-9999
 
 related:
-  - 
-    identifier:
-      id: https://igsn.org/XXXMFO002 
-      kind: igsn 
+  - identifier:
+      id: https://igsn.org/XXXMFO002
+      kind: igsn
     relationshipType: isPartOf
 
 description:
-  '@context': http://schema.mfo.org/specimens/context.jsonld
+  "@context": http://schema.mfo.org/specimens/context.jsonld
   sampleDescription: >
     An interesting tooth collected from Lake Mungo in Australia 
-    by the ANU archeology team. 
+    by the ANU archeology team.
 
-  stratigraphicLocation: 
+  stratigraphicLocation:
     kind: igsn
     id: XXXMFO0002
     relationship: conformal
-  
+
   photograph: http://photos.mfo.org/lake_mungo_tooth.png
 
   mfoId: 508.93
@@ -45,80 +42,70 @@ description:
 
   age: 40000 years
   datingMethod: stratigraphic carbon
-  datingSample: 
-    kind: igsn 
+  datingSample:
+    kind: igsn
     id: XXXMFO0002
 
 log:
-- 
-  eventType: submitted
-  timestamp: 2020-05-22 06:41:04
-  comment: Initial submission from the field by archeology team
--
-  eventType: registered
-  timestamp: 2020-05-22 06:41:32
-  comment: Sample registered by MFO with IGSN
-- 
-  eventType: updated 
-  timestamp: 2020-05-22 07:43:12
-  comment: Date updated from stratigraphic sample 
+  - type: submitted
+    timestamp: 2020-05-22 06:41:04
+    comment: Initial submission from the field by archeology team
+  - type: registered
+    timestamp: 2020-05-22 06:41:32
+    comment: Sample registered by MFO with IGSN
+  - type: updated
+    timestamp: 2020-05-22 07:43:12
+    comment: Date updated from stratigraphic sample
 
 --- # horizon sample
 
 # Registration of the sediment horizon
-'@context': http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
 
-igsn: XXXMFO0002 
+igsn: XXXMFO0002
 
 registrant:
   name: Museum of Fictional Objects
   identifiers:
-    - 
-      kind: uri
+    - kind: uri
       id: https://mfo.org
-    - 
-      kind: orcid 
+    - kind: orcid
       id: 9999-9999-9999-9999
 
 description:
-  '@context': http://schema.igsn.org/json/description/geosamples/v0.1/context.jsonld
-  description: A sample of 'A' horizon in Lake Mungo, Australia 
+  "@context": http://schema.igsn.org/json/description/geosamples/v0.1/context.jsonld
+  description: A sample of 'A' horizon in Lake Mungo, Australia
 
   sampleType: sediment
   collector: ANU archeology team
   curator: Early Australia branch, MFO
-  
+
   isSampleOf:
-    kind: uri 
+    kind: uri
     id: https://ga.gov.au/waterbodies/lake_mungo
 
   samplingLocation:
-    '@context': https://geojson.org/geojson-ld/geojson-context.jsonld
+    "@context": https://geojson.org/geojson-ld/geojson-context.jsonld
     geometry:
       type: Point
       coordinates: [143.055385, -33.715259]
 
   observations:
-    -
-      featureOfInterest: age 
+    - featureOfInterest: age
       madeBySensor: mass spectrometer
       usedProcedure: carbon date
-      hasResult: 
-        units: ka 
+      hasResult:
+        units: ka
         value: 40
       resultTime: 2020-05-22 06:49:48
 
 log:
-- 
-  eventType: submitted
-  timestamp: 2020-05-22 06:41:04
-  comment: Initial submission from the field by archeology team
--
-  eventType: registered
-  timestamp: 2020-05-22 06:41:32
-  comment: Sample registered by MFO with IGSN
-- 
-  eventType: updated
-  timestamp: 2020-05-22 07:06:32
-  comment: Sample dated 
-
+  - type: submitted
+    timestamp: 2020-05-22 06:41:04
+    comment: Initial submission from the field by archeology team
+  - type: registered
+    timestamp: 2020-05-22 06:41:32
+    comment: Sample registered by MFO with IGSN
+  - type: updated
+    timestamp: 2020-05-22 07:06:32
+    comment: Sample dated

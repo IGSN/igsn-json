@@ -1,102 +1,89 @@
 # title: Full registration example
 # description: >
-#   This is an example of a full set of IGSN registration data, in YAML format 
-#   so that we can document the choices here. This includes all registration 
+#   This is an example of a full set of IGSN registration data, in YAML format
+#   so that we can document the choices here. This includes all registration
 # metadata fields
 
 ---
-
 # We include the IGSN JSON-LD context here - this provides semantic labels
 # for each of our keys in the document. This is a fixed constant for the
 # IGSN data to be valid.
-'@context': http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
 
 # This is the identifier that we are talking about. All identifier objects
 # have a 'kind' key indicating what sort of identifier they are, and an id
 # key pointing to a URI or resource definition
-igsn: XXXCSIRO0001  # or igsn.org/XXXCSIRO0001 etc
+igsn: XXXCSIRO0001 # or igsn.org/XXXCSIRO0001 etc
 
-# This is the information about the allocating agent responsible for 
-# publishing the information about this sample. 
+# This is the information about the allocating agent responsible for
+# publishing the information about this sample.
 # Note that you can have multiple identifiers pointing to the same agent
 registrant:
   name: CSIRO
   identifiers:
-    - 
-      kind: orcid
-      id: 0001-0001-0001-0001  # or https://orcid.org/0001-0001-0001-0001
-    - 
-      kind: viaf
+    - kind: orcid
+      id: 0001-0001-0001-0001 # or https://orcid.org/0001-0001-0001-0001
+    - kind: viaf
       id: https://csiro.au/path/to/viaf.file
-    - 
-      kind: uri 
-      id: https://csiro.au 
+    - kind: uri
+      id: https://csiro.au
 
-# Here are some related resources. These can have relationships as in the 
-# spec. One of the things to work out is whether we need to include 
+# Here are some related resources. These can have relationships as in the
+# spec. One of the things to work out is whether we need to include
 # more types of relationships?
 related:
-  -
-    identifier:
+  - identifier:
       id: https://igsn.org/XXXCSIRO0002
       kind: igsn
     relationshipType: "relatedTo"
-  - 
-    identifier:
+  - identifier:
       id: https://igsn.org/XXXCSIROCOLL001
       kind: igsn
     relationship: "childOf"
-  - 
-    identifier:
+  - identifier:
       id: https://csiro.au/sampleDocs/XXCSIRO0001
       kind: uri
     relationship: "documentedBy"
 
 # The log contains information about changes to the sample metadata
 log:
-  - 
-    eventType: submitted
+  - type: submitted
     timestamp: 2020-04-13 11:33:04
     comment: Initial submission by Jess to CSIRO
-  - 
-    eventType: registered
+  - type: registered
     timestamp: 2020-05-21 14:32:58
     comment: Sample registered by CSIRO with IGSN
-  - 
-    eventType: updated
+  - type: updated
     timestamp: 2020-05-21 14:33:45
     comment: Sample description updated by Jess
 
 # The description property is where you can stick all your good
 # science-y bits and pieces
 description:
-
   # We provide a community-owned JSON-LD semantic context here
   # This overrides the IGSN context used earlier within the description
-  # mapping 
-  '@context': http://schema.igsn.org/observations/v0.1/sosa_context.jsonld
+  # mapping
+  "@context": http://schema.igsn.org/observations/v0.1/sosa_context.jsonld
 
   # Now we can use terms defined in our community context
   sampleType: "rock"
-  collector: Jess Robertson 
+  collector: Jess Robertson
   curator: Doug Fils
 
   # Objects can have their own context too
   samplingLocation:
-    '@context': https://geojson.org/geojson-ld/geojson-context.jsonld
-    geometry: 
+    "@context": https://geojson.org/geojson-ld/geojson-context.jsonld
+    geometry:
       type: MultiPoint
       coordinates: [[0, 1], [2, 3], [4, 5], [-3, -2]]
-  
+
   observations:
-    - 
-      featureOfInterest: rockiness
+    - featureOfInterest: rockiness
       madeBySensor: Jess
       usedProcedure: looked at it
       hasSimpleResult: rock level 9000
       resultTime: 2020-05-21 15:06:47
-    -
-      featureOfInterest: taste
+    - featureOfInterest: taste
       madeBySensor: Jess
       usedProcedure: engage rocklicker
       hasSimpleResult: tastes like chicken

@@ -4,7 +4,7 @@
   "skos": "http://www.w3.org/2004/02/skos/core",
   "ssn": "http://www.w3.org/ns/ssn",
   "sosa": "http://www.w3.org/ns/sosa",
-  "igsn_v": "http://schema.igsn.org/vocab",
+  
   "igsn": {
     "@type": "@id",
     "@id": "igsn_v:IGSN"
