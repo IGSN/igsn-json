@@ -24,7 +24,7 @@ def geosample_schema_folder():
 
 
 @pytest.fixture()
-def validator(registration_schema_folder):
+def registration_validator(registration_schema_folder):
     "Load up the registration validator."
     schema_file = registration_schema_folder / "core.schema.json"
     with open(schema_file, "r", encoding="utf-8") as src:
