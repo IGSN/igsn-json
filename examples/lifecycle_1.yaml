@@ -7,9 +7,7 @@
 
 '@context': http://schema.igsn.org/json/registration/v0.1/context.jsonld
 
-igsn:
-  kind: igsn
-  id: XXXMFO0001
+igsn: XXXMFO0001
 
 registrant:
   name: Museum of Fictional Objects
@@ -59,9 +57,7 @@ log:
 # Registration of the sediment horizon
 '@context': http://schema.igsn.org/json/registration/v0.1/context.jsonld
 
-igsn:
-  kind: igsn
-  id: XXXMFO0002 
+igsn: XXXMFO0002 
 
 registrant:
   $ref: http://igsn.org/XXXMFO001#registrant

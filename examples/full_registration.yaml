@@ -14,9 +14,7 @@
 # This is the identifier that we are talking about. All identifier objects
 # have a 'kind' key indicating what sort of identifier they are, and an id
 # key pointing to a URI or resource definition
-igsn: 
-  kind: igsn
-  id: XXXCSIRO0001  # or igsn.org/XXXCSIRO0001 etc
+igsn: XXXCSIRO0001  # or igsn.org/XXXCSIRO0001 etc
 
 # This is the information about the allocating agent responsible for 
 # publishing the information about this sample. 
