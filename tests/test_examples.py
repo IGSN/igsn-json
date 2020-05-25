@@ -40,7 +40,7 @@ for jfile in JSON_FILES:
 @pytest.mark.parametrize(
     "name,document", JSON_DOCUMENTS.items(), ids=JSON_DOCUMENTS.keys()
 )
-def test_json_validates(registration_validator, name, document):
+def test_json_validates_registration(registration_validator, name, document):
     "Examples should validate against our schema"
     # Check validation, wrap in some extra info if required
     try:
