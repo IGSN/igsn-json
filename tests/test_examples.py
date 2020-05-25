@@ -26,18 +26,20 @@ JSON_FILES = [f"{fname}.json" for fname in FILENAMES]
 # Unwrap all our JSON files into seperate documents
 JSON_DOCUMENTS = {}
 for jfile in JSON_FILES:
-    name = jfile.split('.')[0]
+    name = jfile.split(".")[0]
     with open(EXAMPLES / jfile, "rb") as source:
         data = json.load(source)
 
     if isinstance(data, list):
         for idx, document in enumerate(data):
-            JSON_DOCUMENTS[f"{name}[{idx}]"] = document
+            JSON_DOCUMENTS[f"{name}_doc_{idx}"] = document
     else:
         JSON_DOCUMENTS[name] = data
 
 
-@pytest.mark.parametrize("name,document", JSON_DOCUMENTS.items())
+@pytest.mark.parametrize(
+    "name,document", JSON_DOCUMENTS.items(), ids=JSON_DOCUMENTS.keys()
+)
 def test_json_validates(registration_validator, name, document):
     "Examples should validate against our schema"
     # Check validation, wrap in some extra info if required
@@ -64,7 +66,9 @@ def datetime_handler(obj):
     )
 
 
-@pytest.mark.parametrize("yaml_file, json_file", zip(YAML_FILES, JSON_FILES))
+@pytest.mark.parametrize(
+    "yaml_file, json_file", zip(YAML_FILES, JSON_FILES), ids=FILENAMES
+)
 def test_yaml_json_equal(yaml_file, json_file):
     "The YAML and JSON versions should be the same..."
     # Sanity check yaml data
@@ -88,5 +92,5 @@ def test_yaml_json_equal(yaml_file, json_file):
     assert json_str == yaml_json_str
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pytest.main()
