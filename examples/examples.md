@@ -10,11 +10,18 @@ We provide the examples in YAML so that they're easier to read (and because JSON
 $ python convert.py minimal_registration.yaml
 {
     "@context": "http://schema.igsn.org/json/registration/v0.1/context.jsonld",
-    "igsn": {
-        "kind": "igsn",
-        "id": "XXXCSIRO0001"
-    },
-# snip...
+    "igsn": "XXXCSIRO0001",
+    "registrant": {
+        "name": "CSIRO",
+        "identifiers": [
+            {
+                "kind": "orcid",
+                "id": "0001-0001-0001-0001"
+            },
+            # and so on...
+        ]
+    }
+}
 ```
 
 which should also play nicely with other Unix-y tools
