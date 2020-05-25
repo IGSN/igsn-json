@@ -40,10 +40,10 @@ description:
   mfoLocation: Stack 4, part b
 
 log:
-  - eventType: submitted
+  - type: submitted
     timestamp: 2020-05-22 06:41:04
     comment: Initial submission from the field by archeology team
-  - eventType: registered
+  - type: registered
     timestamp: 2020-05-22 06:41:32
     comment: Sample registered by MFO with IGSN
 
@@ -55,7 +55,12 @@ log:
 igsn: XXXMFO0002
 
 registrant:
-  $ref: http://igsn.org/XXXMFO001#registrant
+  name: Museum of Fictional Objects
+  identifiers:
+    - kind: uri
+      id: https://mfo.org
+    - kind: orcid
+      id: 9999-9999-9999-9999
 
 description:
   "@context": http://schema.igsn.org/json/description/geosamples/v0.1/context.jsonld
@@ -76,9 +81,9 @@ description:
       coordinates: [143.055385, -33.715259]
 
 log:
-  - eventType: submitted
+  - type: submitted
     timestamp: 2020-05-22 06:41:04
     comment: Initial submission from the field by archeology team
-  - eventType: registered
+  - type: registered
     timestamp: 2020-05-22 06:41:32
     comment: Sample registered by MFO with IGSN
