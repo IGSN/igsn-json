@@ -1,10 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.igsn.org/json/registration/v0.1/eventLog.schema.json",
   "title": "IGSN Log events schema",
   "description": "Schema describing sample metadata events",
   "definitions": {
-    "eventType": {},
     "event": {
       "description": "A single log item",
       "type": "object",

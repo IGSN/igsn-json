@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://schema.igsn.org/json/registration/v0.1/relatedIdentifier.schema.json",
   "title": "IGSN related identifier schema",
   "description": "Describes the structure of related identifiers for an IGSN",
