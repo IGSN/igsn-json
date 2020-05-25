@@ -37,7 +37,7 @@
                 "$ref": "identifiers.schema.json#/definitions/orcid"
               },
               {
-                "$ref": "identifiers.schema.json?#/definitions/uriId"
+                "$ref": "identifiers.schema.json#/definitions/uriId"
               }
             ]
           }
