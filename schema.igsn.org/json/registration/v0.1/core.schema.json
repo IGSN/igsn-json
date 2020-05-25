@@ -4,32 +4,6 @@
   "title": "IGSN registry metadata schema",
   "description": "Core IGSN metadata sent to the registry",
   "type": "object",
-  "definitions": {
-    "event": {
-      "$id": "#/event",
-      "type": "object",
-      "properties": {
-        "eventType": {
-          "type": "string",
-          "enum": [
-            "submitted",
-            "registered",
-            "updated",
-            "deprecated",
-            "destroyed"
-          ]
-        },
-        "timestamp": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "comment": {
-          "type": "string"
-        }
-      },
-      "required": ["type", "timestamp"]
-    }
-  },
   "properties": {
     "@context": {
       "const": "http://schema.igsn.org/json/registration/v0.1/context.jsonld"
@@ -73,22 +47,14 @@
     },
     "related": {
       "type": "array",
-      "items": {
-        "$ref": "relatedIdentifier.schema.json"
-      },
+      "items": { "$ref": "relatedIdentifier.schema.json" },
       "default": []
     },
     "description": {
       "type": "object",
       "description": "Data related to this sample"
     },
-    "log": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/event"
-      },
-      "minItems": 1
-    }
+    "log": { "$ref": "eventLog.schema.json" }
   },
   "required": ["@context", "igsn", "registrant"]
 }

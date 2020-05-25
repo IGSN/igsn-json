@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://schema.igsn.org/json/registration/v0.1/eventLog.schema.json",
+  "title": "IGSN Log events schema",
+  "description": "Schema describing sample metadata events",
+  "definitions": {
+    "event": {
+      "description": "A single log item",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "submitted",
+            "registered",
+            "updated",
+            "deprecated",
+            "destroyed"
+          ]
+        },
+        "timestamp": {
+          "oneOf": [
+            { "type": "string", "format": "date-time" },
+            { "type": "string", "format": "date" }
+          ]
+        },
+        "comment": {
+          "type": "string"
+        }
+      },
+      "required": ["type", "timestamp"]
+    }
+  },
+  "type": "array",
+  "items": { "$ref": "#/definitions/event" },
+  "minItems": 1
+}
