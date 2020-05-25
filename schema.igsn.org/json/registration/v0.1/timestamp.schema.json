@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://schema.igsn.org/json/registration/v0.1/eventLog.schema.json",
+  "title": "IGSN timestamps",
+  "description": "Schema describing a subset of RFC3339 for IGSN timestamp formatting",
+  "definitions": {
+    "date": {
+        "description": "A subset of RFC3339 dates, i.e. those given as YYYY-mm-dd. Note we don't do any checking of month/day/year validity, just whether the string is in the right format.",
+        "type": "string",
+        "pattern": "^[0-9]{4}-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])$"
+    },
+    "dateTime": {
+        "description": "A subset of RFC3339 date-time strings, i.e. those given as YYYY-mm-ddTHH:MM:ss[.frac][Zoffset], in 24H format",
+        "type": "string",
+        "pattern": "^[0-9]{4}-(1[0-2]|0[1-9])-(3[01]|[12][0-9]|0[1-9])T(2[0-3]|[01][0-9]):[0-5][0-9]:(60|[0-5][0-9])(.[0-9]+)?(Z[+\\-]?(1[0-2]|0[0-9]):[0-5][0-9])?$"
+    }
+  },
+  "oneOf": [
+    { "$ref": "#/definitions/date" },
+    { "$ref": "#/definitions/dateTime" }
+  ]
+}

@@ -4,6 +4,7 @@
   "title": "IGSN Log events schema",
   "description": "Schema describing sample metadata events",
   "definitions": {
+    "eventType": {},
     "event": {
       "description": "A single log item",
       "type": "object",
@@ -18,15 +19,8 @@
             "destroyed"
           ]
         },
-        "timestamp": {
-          "oneOf": [
-            { "type": "string", "format": "date-time" },
-            { "type": "string", "format": "date" }
-          ]
-        },
-        "comment": {
-          "type": "string"
-        }
+        "timestamp": { "$ref": "timestamp.schema.json" },
+        "comment": { "type": "string" }
       },
       "required": ["type", "timestamp"]
     }
