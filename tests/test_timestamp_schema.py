@@ -1,8 +1,20 @@
 import pytest
 import fastjsonschema as jsonschema
 
-
-@pytest.mark.parametrize("string", ["2020-12-01"])
+@pytest.mark.parametrize(
+    "string",
+    [
+        "2020-12-01",
+        "0080-05-29",
+        "2013-03-31",
+        "2013-03-31T00:00:00.0023",
+        "0080-07-13T09:08Z+10:39",
+        "3080-07-13T09:08Z10:39",
+        "2020-05-25T20:28:35",
+        "2009-05-19T14:31",
+        "2009-05-19T14:39:22",
+    ],
+)
 def test_should_pass(timestamp_validator, string):
     "These strings should validate"
     timestamp_validator(string)
