@@ -26,11 +26,11 @@ We're planning on having a few video-to-video meetings over the course of the sp
 
 As we're spread all around the world getting a time that suits everyone is a bit challenging. If you can't make these we will post recordings of these here:
 
-| Date            | Time (UTC) | Recorded video link |
-| --------------- | ---------- | ------------------- |
-| Monday May 25   | 10am       | TBC                 |
-| Monday June 2nd | 10am       | TBC                 |
-| Friday June 5th | 10am       | TBC                 |
+| Date             | Time (UTC) | Recorded video link |
+| ---------------- | ---------- | ------------------- |
+| Monday May 25    | 10am       | [Video](https://youtu.be/d6HSZuMV2Bs)               |
+| Tuesday June 2nd | 10am       | TBC                 |
+| Friday June 5th  | 10am       | TBC                 |
 
 ## Getting help
 
