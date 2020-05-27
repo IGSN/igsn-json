@@ -3,7 +3,6 @@ from pathlib import Path
 import pytest
 import jsonref as json
 from fastjsonschema import compile as compile_schema
-import requests
 
 
 # Get the root directory of the project
