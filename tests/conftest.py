@@ -15,7 +15,7 @@ print(f"Schema root at {ROOT}")
 def schema_home():
     "Specifies the root schema URI"
     github = {"org": "IGSN", "repo": "igsn-json", "branch": "feature/update-links"}
-    return f"https://raw.githubusercontent.com/${github['org']}/${github['repo']}/${github['branch']}"
+    return f"https://raw.githubusercontent.com/{github['org']}/{github['repo']}/{github['branch']}"
 
 
 @pytest.fixture()
