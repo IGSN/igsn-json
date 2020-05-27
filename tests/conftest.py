@@ -9,9 +9,13 @@ from fastjsonschema import compile as compile_schema
 ROOT = Path(__file__).parent.parent.absolute()
 print(f"Schema root at {ROOT}")
 
+
 # Parameters to point at a version of the schema
-GITHUB_BRANCH = "feature/update-links"
-SCHEMA_HOME = f"https://raw.githubusercontent.com/IGSN/igsn-json/${GITHUB_BRANCH}"
+@pytest.fixture()
+def schema_home():
+    "Specifies the root schema URI"
+    github = {"org": "IGSN", "repo": "igsn-json", "branch": "feature/update-links"}
+    return f"https://raw.githubusercontent.com/${github['org']}/${github['repo']}/${github['branch']}"
 
 
 @pytest.fixture()
