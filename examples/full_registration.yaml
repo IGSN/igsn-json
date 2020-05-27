@@ -8,7 +8,7 @@
 # We include the IGSN JSON-LD context here - this provides semantic labels
 # for each of our keys in the document. This is a fixed constant for the
 # IGSN data to be valid.
-"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
 
 # This is the identifier that we are talking about. All identifier objects
 # have a 'kind' key indicating what sort of identifier they are, and an id
@@ -63,7 +63,7 @@ description:
   # We provide a community-owned JSON-LD semantic context here
   # This overrides the IGSN context used earlier within the description
   # mapping
-  "@context": http://schema.igsn.org/observations/v0.1/sosa_context.jsonld
+  "@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/observations/v0.1/sosa_context.jsonld
 
   # Now we can use terms defined in our community context
   sampleType: "rock"

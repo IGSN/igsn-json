@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schema.igsn.org/json/registration/v0.1/identifiers.schema.json",
+  "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/identifiers.schema.json",
   "title": "IGSN: Persistent Identifier schemas",
   "description": "Persistent identifiers recognized within IGSN metadata. All ids are given as objects, with a 'kind' key indicating the type of the identifier",
   "type": "object",

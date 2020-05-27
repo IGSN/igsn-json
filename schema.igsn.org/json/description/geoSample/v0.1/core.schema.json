@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "http://schema.igsn.org/json/description/geoSample/v0.1/geoSample.json",
+    "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/description/geoSample/v0.1/geoSample.json",
     "title": "IGSN: Descriptive schemas",
     "description": "Descriptive metadata schema for geoscientific samples",
     "type": "object"

@@ -6,7 +6,7 @@
 
 --- # tooth
 
-"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
 
 igsn: XXXMFO0001
 
@@ -81,7 +81,7 @@ log:
 --- # horizon sample
 
 # Registration of the sediment horizon
-"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
 
 igsn: XXXMFO0002
 
@@ -94,7 +94,7 @@ registrant:
       id: 9999-9999-9999-9999
 
 description:
-  "@context": http://schema.igsn.org/json/description/geosamples/v0.1/context.jsonld
+  "@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/description/geosamples/v0.1/context.jsonld
   description: A sample of 'A' horizon in Lake Mungo, Australia
 
   sampleType: sediment
@@ -133,7 +133,7 @@ log:
 
 --- # tooth sample for CSIRO
 
-"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
 
 igsn: XXXCSIRO001
 
