@@ -8,7 +8,7 @@
 # We include the IGSN JSON-LD context here - this provides semantic labels
 # for each of our keys in the document. This is a fixed constant for the
 # IGSN data to be valid.
-"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld
 
 # This is the identifier that we are talking about. All identifier objects
 # have a 'kind' key indicating what sort of identifier they are, and an id

@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/description/materialSample/0.1/materialSample/core.json",
+    "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/description/materialSample/0.1/materialSample/core.json",
     "title": "IGSN: Material sample descriptive schema",
     "description": "Descriptive metadata schema for material science samples",
     "type": "object"

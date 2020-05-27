@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/core.schema.json",
+  "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/core.schema.json",
   "title": "IGSN registry metadata schema",
   "description": "Core IGSN metadata sent to the registry",
   "type": "object",

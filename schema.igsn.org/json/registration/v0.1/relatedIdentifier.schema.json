@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/relatedIdentifier.schema.json",
+  "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/relatedIdentifier.schema.json",
   "title": "IGSN related identifier schema",
   "description": "Describes the structure of related identifiers for an IGSN",
   "type": "object",
