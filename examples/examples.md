@@ -9,7 +9,7 @@ We provide the examples in YAML so that they're easier to read (and because JSON
 ```bash
 $ python convert.py minimal_registration.yaml
 {
-    "@context": "http://schema.igsn.org/json/registration/v0.1/context.jsonld",
+    "@context": "https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld",
     "igsn": "XXXCSIRO0001",
     "registrant": {
         "name": "CSIRO",
@@ -58,7 +58,7 @@ Let's walk through the examples we've got...
 This is the minimal set of metadata required to define an IGSN - the `registrant` field pointing to the allocating agent, and the identifier itself. Not very useful but easy to do:
 
 ```yaml
-"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
 igsn: XXXCSIRO0001
 registrant:
   name: CSIRO
@@ -132,7 +132,7 @@ In the `full_registration` example we show how you can combine multiple JSON-LD 
 
 ```yaml
 description:
-  "@context": http://schema.igsn.org/observations/v0.1/sosa_context.jsonld
+  "@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/observations/v0.1/sosa_context.jsonld
   sampleType: "rock"
   collector: Jess Robertson
   curator: Doug Fils
@@ -167,7 +167,7 @@ To show how all these parts fit together to give rich sample metadata across org
 We'll say that an archeology team from ANU, in collaboration with the Museum of Fictional Objects (MFO) has gone out and collected their tooth. They've registered the tooth as a sample/specimen with IGSN, including a basic description of the sample, links to other things like photographs, and some information about where the sample is located within the MFO:
 
 ```yaml
-"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
 igsn: XXXMFO0001
 registrant:
   name: Museum of Fictional Objects
@@ -204,12 +204,12 @@ log:
 The team have also sampled the stratigraphic horizon that this tooth was found in, and created an IGSN for this sample too:
 
 ```yaml
-"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
 igsn: XXXMFO0002
 registrant:
   $ref: http://igsn.org/XXXMFO001#registrant
 description:
-  "@context": http://schema.igsn.org/json/description/geosamples/v0.1/context.jsonld
+  "@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/description/geosamples/v0.1/context.jsonld
   description: A sample of 'A' horizon in Lake Mungo, Australia
   sampleType: sediment
   collector: ANU archeology team
@@ -299,7 +299,7 @@ log:
 Now that they know the age of the animal tooth, the team decides they'd like to find out something about the animal's range by doing some isotopic analysis. They engage CSIRO (who have an overabundance of mass specs) to do this work. The CSIRO lab team take a small sample, and register this as a new sample with IGSN:
 
 ```yaml
-"@context": http://schema.igsn.org/json/registration/v0.1/context.jsonld
+"@context": https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld
 igsn: XXXCSIRO001
 registrant:
   name: Commonwealth Scientific and Industrial Research Organization
