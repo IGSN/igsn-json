@@ -3,11 +3,23 @@ from pathlib import Path
 import pytest
 import jsonref as json
 from fastjsonschema import compile as compile_schema
+import requests
 
 
 # Get the root directory of the project
 ROOT = Path(__file__).parent.parent.absolute()
-print(f"Schema root at {ROOT}")
+
+
+@pytest.fixture()
+def profiles():
+    "Return profile locations"
+    profiles = {
+        "registration": "registration/v0.1",
+        "geosample": "description/geoSample/v0.1",
+    }
+
+    # Add base URL and return
+    return {key: f"schema.igsn.org/json/{value}" for key, value in profiles.items()}
 
 
 # Parameters to point at a version of the schema
@@ -24,16 +36,13 @@ def schema_home():
 
 
 @pytest.fixture()
-def registration_schema_folder():
-    "Get the location of the given schema folder."
-    schema_version = "v0.1"
-    return ROOT / f"schema.igsn.org/json/registration/{schema_version}/"
+def registration_schema_folder(profiles):
+    return ROOT / profiles["registration"]
 
 
 @pytest.fixture()
-def geosample_schema_folder():
-    schema_version = "v0.1"
-    return ROOT / f"schema.igsn.org/json/description/geoSample/{schema_version}/"
+def geosample_schema_folder(profiles):
+    return ROOT / profiles["geoSample"]
 
 
 def load_schema(folder, schema):
@@ -47,10 +56,24 @@ def load_schema(folder, schema):
         return compile_schema(schema)
 
 
+def load_remote_schema(base_uri, schema):
+    "Load and compile a schema remotely"
+    schema_uri = f"{base_uri}/{schema}"
+    return json.load(schema_uri, jsonschema=True)
+
+
 @pytest.fixture()
 def registration_validator(registration_schema_folder):
     "Load up the registration validator."
     return load_schema(registration_schema_folder, "core.schema.json")
+
+
+@pytest.fixture()
+def remote_registration_validator(schema_home, profiles):
+    "Load up a validator based on the remote schema"
+    schema_uri = f"{schema_home}/{profiles['registration']}/core.schema.json"
+    schema = json.load_uri(schema_uri, jsonschema=True)
+    return compile_schema(schema)
 
 
 @pytest.fixture()
