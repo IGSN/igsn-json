@@ -9,6 +9,10 @@ from fastjsonschema import compile as compile_schema
 ROOT = Path(__file__).parent.parent.absolute()
 print(f"Schema root at {ROOT}")
 
+# Parameters to point at a version of the schema
+GITHUB_BRANCH = "feature/update-links"
+SCHEMA_HOME = f"https://raw.githubusercontent.com/IGSN/igsn-json/${GITHUB_BRANCH}"
+
 
 @pytest.fixture()
 def registration_schema_folder():
@@ -32,6 +36,7 @@ def load_schema(folder, schema):
         # dereferencable URIs
         schema = json.load(src, base_uri=schema_file.as_uri())
         return compile_schema(schema)
+
 
 @pytest.fixture()
 def registration_validator(registration_schema_folder):

@@ -2,6 +2,8 @@
 import pytest
 from fastjsonschema import JsonSchemaException
 
+from tests.conftest import SCHEMA_HOME
+
 
 @pytest.mark.parametrize(
     "obj,should_pass",
@@ -77,7 +79,8 @@ def test_igsn_registration(registration_validator, obj, should_pass):
     "Sanity checking for basic IGSN registration inputs."
     try:
         # Inject required IGSN registration context
-        obj["@context"] = "http://schema.igsn.org/json/registration/v0.1/context.jsonld"
+        obj["@context"] = \
+            f"{SCHEMA_HOME}/schema.igsn.org/json/registration/v0.1/context.jsonld"
 
         # Check validation (or not...)
         registration_validator(obj)
