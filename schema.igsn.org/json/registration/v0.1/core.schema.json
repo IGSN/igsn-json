@@ -6,7 +6,7 @@
   "type": "object",
   "properties": {
     "@context": {
-      "const": "https://raw.githubusercontent.com/IGSN/igsn-json/feature/update-links/schema.igsn.org/json/registration/v0.1/context.jsonld"
+      "const": "https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld"
     },
     "igsn": {
       "$ref": "identifiers.schema.json#/definitions/igsnPid"

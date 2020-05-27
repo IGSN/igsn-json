@@ -29,7 +29,7 @@ def schema_home():
         "host": "https://raw.githubusercontent.com",
         "org": "IGSN",
         "repo": "igsn-json",
-        "branch": "feature/update-links",
+        "branch": "master",
     }
     return f"{github['host']}/{github['org']}/{github['repo']}/{github['branch']}"
 
