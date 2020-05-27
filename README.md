@@ -26,9 +26,9 @@ We're planning on having a few video-to-video meetings over the course of the sp
 
 As we're spread all around the world getting a time that suits everyone is a bit challenging. If you can't make these we will post recordings of these here:
 
-| Date             | Time (UTC) | Recorded video link |
+| Date             | Time (UTC) | Resources |
 | ---------------- | ---------- | ------------------- |
-| Monday May 25    | 10am       | [Video](https://youtu.be/d6HSZuMV2Bs)               |
+| Monday May 25    | 10am       | [Video](https://youtu.be/d6HSZuMV2Bs), [Slides](https://zenodo.org/record/3858150), [Notes](https://docs.google.com/document/d/1Rk88ba0iMiGJldk10owsLs6kAItkAvqZJCbWtJfLzhY/edit?usp=sharing)   |
 | Tuesday June 2nd | 10am       | TBC                 |
 | Friday June 5th  | 10am       | TBC                 |
 
