@@ -1,12 +1,59 @@
 {
-  "dc": "http://purl.org/dc/elements/1.1",
-  "dct": "http://purl.org/dc/terms",
-  "skos": "http://www.w3.org/2004/02/skos/core",
-  "ssn": "http://www.w3.org/ns/ssn",
-  "sosa": "http://www.w3.org/ns/sosa",
-  
+  "@context": {
+    "igsnvoc": "https://igsn.org/voc/v1/",
+    "schema": "https://schema.org/",
+    "igsn": {
+      "@id": "schema:identifier",
+      "@type": "schema:PropertyValue",
+      "@context": {
+        "kind": "schema:propertyID",
+        "id": "schema:value"
+      }
+    },
+    "comments": "schema:description",
+    "registrant": {
+      "@id": "igsn:registrant",
+      "@type": "schema:Organization",
+      "@context": {
+        "name": "schema:name",
+        "identifiers": {
+          "@id": "schema:identifier",
+          "@type": "schema:PropertyValue",
+          "@context": {
+            "kind": "schema:regpropertyID",
+            "id": "schema:regvalue"
+          }
+        }
+      }
+    }
+  },
+  "@id": "http://this.thing/inthe/provider/namespace/ID",
+  "@type": "https://igsn.org/voc/v1/Sample",
   "igsn": {
-    "@type": "@id",
-    "@id": "igsn_v:IGSN"
+    "@type": "https://igsn.org/voc/v1/SampleID",
+    "kind": "igsn",
+    "id": "XXXCSIRO0001"
+  },
+  "comments": "This is a comments on the sample",
+  "registrant": {
+    "name": "CSIRO",
+    "@type": "https://igsn.org/voc/v1/Registrant",
+    "identifiers": [
+      {
+        "kind": "orcid",
+        "id": "0001-0001-0001-0001",
+        "@type": "https://igsn.org/voc/v1/Identifier"
+      },
+      {
+        "kind": "viaf",
+        "id": "https://csiro.au/path/to/viaf.file",
+        "@type": "https://igsn.org/voc/v1/Identifier"
+      },
+      {
+        "kind": "uri",
+        "id": "https://csiro.au",
+        "@type": "https://igsn.org/voc/v1/Identifier"
+      }
+    ]
   }
 }
