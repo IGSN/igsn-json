@@ -26,34 +26,5 @@
         }
       }
     }
-  },
-  "@id": "http://this.thing/inthe/provider/namespace/ID",
-  "@type": "https://igsn.org/voc/v1/Sample",
-  "igsn": {
-    "@type": "https://igsn.org/voc/v1/SampleID",
-    "kind": "igsn",
-    "id": "XXXCSIRO0001"
-  },
-  "comments": "This is a comments on the sample",
-  "registrant": {
-    "name": "CSIRO",
-    "@type": "https://igsn.org/voc/v1/Registrant",
-    "identifiers": [
-      {
-        "kind": "orcid",
-        "id": "0001-0001-0001-0001",
-        "@type": "https://igsn.org/voc/v1/Identifier"
-      },
-      {
-        "kind": "viaf",
-        "id": "https://csiro.au/path/to/viaf.file",
-        "@type": "https://igsn.org/voc/v1/Identifier"
-      },
-      {
-        "kind": "uri",
-        "id": "https://csiro.au",
-        "@type": "https://igsn.org/voc/v1/Identifier"
-      }
-    ]
   }
 }
