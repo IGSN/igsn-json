@@ -29,7 +29,7 @@ cache:
 install:
   # Install everything with our pipenv
   - pip install pipenv
-  - pipenv install --ignore-pipfile --dev
+  - pipenv install --dev
 
 # command to run tests
 script:
