@@ -118,7 +118,7 @@ log:
     comment: Sample description updated by Jess
 ```
 
-Here we show when the sample was submitted, when it was registered with the central IGSN registry, and then when I updated the descriptive metadata. The eventTypes are controlled with an enumeration in the [`core.schema.json` JSONSchema document](https://github.com/IGSN/igsn-json/blob/master/schema.igsn.org/json/registration/v0.1/core.schema.json#L14)
+Here we show when the sample was submitted, when it was registered with the central IGSN registry, and then when I updated the descriptive metadata. The eventTypes are controlled with an enumeration in the [`main.schema.json` JSONSchema document](https://github.com/IGSN/igsn-json/blob/master/schema.igsn.org/json/registration/v0.1/main.schema.json#L14)
 
 ## Descriptive metadata
 

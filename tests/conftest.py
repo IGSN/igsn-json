@@ -64,13 +64,13 @@ def load_remote_schema(base_uri, schema):
 @pytest.fixture()
 def registration_validator(registration_schema_folder):
     "Load up the registration validator."
-    return load_schema(registration_schema_folder, "core.schema.json")
+    return load_schema(registration_schema_folder, "main.schema.json")
 
 
 @pytest.fixture()
 def remote_registration_validator(schema_home, profiles):
     "Load up a validator based on the remote schema"
-    schema_uri = f"{schema_home}/{profiles['registration']}/core.schema.json"
+    schema_uri = f"{schema_home}/{profiles['registration']}/main.schema.json"
     schema = json.load_uri(schema_uri, jsonschema=True)
     return compile_schema(schema)
 
