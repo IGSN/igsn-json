@@ -1,0 +1,54 @@
+{
+	"@context": {
+    "igsnvoc": "https://igsn.org/voc/v1/",
+    "schema": "https://schema.org/",
+    "igsn": {
+      "@id": "schema:identifier",
+      "@type": "schema:PropertyValue",
+      "@context": {
+        "kind": "schema:propertyID",
+        "id": "schema:value"
+      }
+    },
+    "comments": "schema:description",
+    "registrant": {
+      "@id": "igsnvoc:registrant",
+      "@type": "schema:Organization",
+      "@context": {
+        "name": "schema:name",
+        "identifiers": {
+          "@id": "schema:identifier",
+          "@type": "schema:PropertyValue",
+          "@context": {
+            "kind": "schema:regpropertyID",
+            "id": "schema:regvalue"
+          }
+        }
+      }
+    },
+    "related": {
+      "@id": "igsnvoc:related",
+      "@type": "schema:SeeAlso",
+      "@context": {
+        "relationship": "igsnvoc:relationship",
+        "identifier": {
+          "@id": "schema:identifier",
+          "@type": "schema:PropertyValue",
+          "@context": {
+            "kind": "schema:regpropertyID",
+            "id": "schema:regvalue"
+          }
+        }
+      }
+    }
+  },
+  "log": {
+      "@id": "igsnvoc:log",
+      "@type": "schema:Log",
+      "@context": {
+        "type": "igsnvoc:relationship",
+        "timestamp": "igsnvoc:timestamp",
+        "comment": "igsnvoc:comment"
+        }
+    }
+}

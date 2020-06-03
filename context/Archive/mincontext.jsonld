@@ -1,0 +1,30 @@
+{
+    "@context": {
+      "igsnvoc": "https://igsn.org/voc/v1/",
+      "schema": "https://schema.org/",
+      "igsn": {
+        "@id": "schema:identifier",
+        "@type": "schema:PropertyValue",
+        "@context": {
+          "kind": "schema:propertyID",
+          "id": "schema:value"
+        }
+      },
+      "comments": "schema:description",
+      "registrant": {
+        "@id": "igsn:registrant",
+        "@type": "schema:Organization",
+        "@context": {
+          "name": "schema:name",
+          "identifiers": {
+            "@id": "schema:identifier",
+            "@type": "schema:PropertyValue",
+            "@context": {
+              "kind": "schema:regpropertyID",
+              "id": "schema:regvalue"
+            }
+          }
+        }
+      }
+    }
+}
