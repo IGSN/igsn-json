@@ -1,5 +1,5 @@
 {
-  "@context": {
+	"@context": {
     "igsnvoc": "https://igsn.org/voc/v1/",
     "schema": "https://schema.org/",
     "igsn": {
@@ -12,7 +12,7 @@
     },
     "comments": "schema:description",
     "registrant": {
-      "@id": "igsn:registrant",
+      "@id": "igsnvoc:registrant",
       "@type": "schema:Organization",
       "@context": {
         "name": "schema:name",
@@ -25,6 +25,30 @@
           }
         }
       }
+    },
+    "related": {
+      "@id": "igsnvoc:related",
+      "@type": "schema:SeeAlso",
+      "@context": {
+        "relationship": "igsnvoc:relationship",
+        "identifier": {
+          "@id": "schema:identifier",
+          "@type": "schema:PropertyValue",
+          "@context": {
+            "kind": "schema:regpropertyID",
+            "id": "schema:regvalue"
+          }
+        }
+      }
     }
-  }
+  },
+  "log": {
+      "@id": "igsnvoc:log",
+      "@type": "schema:Log",
+      "@context": {
+        "type": "igsnvoc:relationship",
+        "timestamp": "igsnvoc:timestamp",
+        "comment": "igsnvoc:comment"
+        }
+    }
 }
