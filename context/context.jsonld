@@ -1,5 +1,6 @@
 {
 	"@context": {
+    "Sample": "https://igsn.org/voc/v1/Sample",
     "igsnvoc": "https://igsn.org/voc/v1/",
     "schema": "https://schema.org/",
     "igsn": {
