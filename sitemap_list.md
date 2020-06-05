@@ -7,3 +7,6 @@ contact: Damien
 
 https://igsn.geoanalytics.csiro.au/sitemap.xml
 contact 
+
+# MARUM test sitemap
+http://seprojects.marum.de/sitemap.xml
