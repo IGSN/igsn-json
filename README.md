@@ -30,7 +30,7 @@ As we're spread all around the world getting a time that suits everyone is a bit
 | ---------------- | ---------- | ------------------- |
 | Monday May 25    | 10am       | [Video](https://youtu.be/d6HSZuMV2Bs), [Slides](https://zenodo.org/record/3858150), [Notes](https://docs.google.com/document/d/1Rk88ba0iMiGJldk10owsLs6kAItkAvqZJCbWtJfLzhY/edit?usp=sharing)   |
 | Tuesday June 2nd | 10am       | [Video](https://youtu.be/iidSS0HB55Q), [Notes](https://docs.google.com/document/d/1XupC4lDuJTeIXdUR8J9J-oKSygLrV25CpQj_QEHovvI/edit?usp=sharing)                 |
-| Friday June 5th  | 10am       | TBC                 |
+| Friday June 5th  | 10am       | [Video](https://youtu.be/dhRHQcW-79Y), [Notes](https://docs.google.com/document/d/12jJCG_XrEHRQUrvDAs3ndNPneEn8jh3FPQBz65ouKoE/edit?usp=sharing)                 |
 
 ## Getting help
 
