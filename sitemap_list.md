@@ -12,4 +12,4 @@ contact
 http://seprojects.marum.de/sitemap.xml
 
 # SESAR test sitemap
-https://github.com/earthchem/igsn-sprint-excersices
+https://github.com/earthchem/igsn-sprint-excersices/sitemaps/sitemap-index.xml
