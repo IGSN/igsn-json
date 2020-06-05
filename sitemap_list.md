@@ -10,3 +10,6 @@ contact
 
 # MARUM test sitemap
 http://seprojects.marum.de/sitemap.xml
+
+# SESAR test sitemap
+https://github.com/earthchem/igsn-sprint-excersices
