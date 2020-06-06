@@ -29,10 +29,9 @@ def schema_home():
         "host": "https://raw.githubusercontent.com",
         "org": "IGSN",
         "repo": "igsn-json",
-        "branch": "master",
+        "branch": "issue-9-Merge_in_context_jsonld_to_registration_schema",
     }
     return f"{github['host']}/{github['org']}/{github['repo']}/{github['branch']}"
-
 
 @pytest.fixture()
 def registration_schema_folder(profiles):

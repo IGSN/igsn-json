@@ -2,6 +2,9 @@
 import pytest
 from fastjsonschema import JsonSchemaException
 
+# Which context we should point to
+JSONLD_CONTEXT = "https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld"
+
 # Some bogus data for testing - as (obj, is_valid) tuples
 TEST_OBJECTS = [
     (
@@ -71,7 +74,6 @@ TEST_OBJECTS = [
     ),
 ]
 
-
 @pytest.mark.parametrize("obj,should_pass", TEST_OBJECTS)
 def test_igsn_registration(
     schema_home, profiles, registration_validator, obj, should_pass
@@ -80,7 +82,7 @@ def test_igsn_registration(
     try:
         # Inject required IGSN registration context
         location = f"{schema_home}/{profiles['registration']}"
-        obj["@context"] = f"{location}/context.jsonld"
+        obj["@context"] = JSONLD_CONTEXT
         obj['@id'] = "https://example-agent.org/igsns/XXXTEST234"
 
         # Check validation (or not...)
@@ -96,13 +98,13 @@ def test_igsn_registration(
 
 @pytest.mark.parametrize("obj,should_pass", TEST_OBJECTS)
 def test_against_remote_schema(
-    schema_home, profiles, remote_registration_validator, obj, should_pass
+    remote_registration_validator, obj, should_pass
 ):
     "Check against remote schema for the branch"
     try:
         # Inject required IGSN registration context
-        location = f"{schema_home}/{profiles['registration']}"
-        obj["@context"] = f"{location}/context.jsonld"
+        obj["@context"] = JSONLD_CONTEXT
+        obj["@id"] = "https://example-agent.org/igsns/XXXTEST234"
 
         # Check validation (or not...)
         remote_registration_validator(obj)
