@@ -6,6 +6,7 @@
 --- # tooth
 
 "@context": https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld
+"@id": "https://mfo.org/specimens/XXXMFO0001"
 
 igsn: XXXMFO0001
 
@@ -51,6 +52,7 @@ log:
 
 # Registration of the sediment horizon
 "@context": https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld
+"@id": "https://mfo.org/specimens/XXXMFO0002"
 
 igsn: XXXMFO0002
 
