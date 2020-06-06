@@ -33,6 +33,7 @@ def schema_home():
     }
     return f"{github['host']}/{github['org']}/{github['repo']}/{github['branch']}"
 
+
 @pytest.fixture()
 def registration_schema_folder(profiles):
     return ROOT / profiles["registration"]
