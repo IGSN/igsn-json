@@ -59,6 +59,7 @@ This is the minimal set of metadata required to define an IGSN - the `registrant
 
 ```yaml
 "@context": https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld
+"@id": https://csiro.au/bogus_igsns/XXXCSIRO0001
 igsn: XXXCSIRO0001
 registrant:
   name: CSIRO
