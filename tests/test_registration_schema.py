@@ -81,6 +81,7 @@ def test_igsn_registration(
         # Inject required IGSN registration context
         location = f"{schema_home}/{profiles['registration']}"
         obj["@context"] = f"{location}/context.jsonld"
+        obj['@id'] = "https://example-agent.org/igsns/XXXTEST234"
 
         # Check validation (or not...)
         registration_validator(obj)
