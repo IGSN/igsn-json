@@ -12,6 +12,7 @@ TO_CHECK = [
     ("bioSample", SCHEMA_FOLDER / "description" / "bioSample" / "v0.1"),
     ("materialSample", SCHEMA_FOLDER / "description" / "materialSample" / "v0.1"),
     ("registration", SCHEMA_FOLDER / "registration" / "v0.1"),
+    ("spatial", SCHEMA_FOLDER / "description" / "spatial" / "v0.1"),
 ]
 
 # Remap IDs and schemas so we can make tests a bit easier to follow

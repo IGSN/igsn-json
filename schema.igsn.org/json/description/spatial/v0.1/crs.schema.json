@@ -1,0 +1,18 @@
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/description/spatial/v0.1/crs.schema.json",
+  "title": "IGSN registry metadata schema",
+  "description": "Coordinate reference systems - we don't really check that these are valid, just that they're formatted correctly at the moment",
+  "oneOf": [
+    {
+        "type": "string",
+        "description": "An EPSG refernce to a coordinate reference system",
+        "pattern": "http://www.opengis.net/def/crs/EPSG/0/[0-9]+"
+    },
+    {
+        "type": "string",
+        "description": "Some other reference"
+    }
+  ]
+}
