@@ -14,6 +14,7 @@ fastjsonschema = "*"
 jsonref = "*"
 pyyaml = "*"
 click = "*"
+pyld = "*"
 
 [requires]
 python_version = "3.8"
