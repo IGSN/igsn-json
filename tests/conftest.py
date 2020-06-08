@@ -1,12 +1,15 @@
 from pathlib import Path
+import sys
 
 import pytest
 import jsonref as json
 from fastjsonschema import compile as compile_schema
 
-
 # Get the root directory of the project
 ROOT = Path(__file__).parent.parent.absolute()
+TEST_DIR = ROOT / "tests"
+HELPERS = ROOT / "tests" / "helpers"
+sys.path.append(str(HELPERS))
 
 
 @pytest.fixture()

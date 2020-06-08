@@ -1,5 +1,3 @@
-from pathlib import Path
-from collections import defaultdict
 import json
 from datetime import date, datetime
 
@@ -12,29 +10,10 @@ try:
 except ImportError:
     from yaml import Loader
 
-# Example files from examples folder
-EXAMPLES = Path(__file__).parent.parent / "examples"
-
-# The example files are those for which we have both a JSON and YAML file
-FILES = defaultdict(list)
-for fname in EXAMPLES.iterdir():
-    FILES[fname.stem].append(fname.suffix)
-FILENAMES = [name for name, ext in FILES.items() if set(ext) == {".yaml", ".json"}]
-YAML_FILES = [f"{fname}.yaml" for fname in FILENAMES]
-JSON_FILES = [f"{fname}.json" for fname in FILENAMES]
+from helpers.examples import json_examples, filenames
 
 # Unwrap all our JSON files into seperate documents
-JSON_DOCUMENTS = {}
-for jfile in JSON_FILES:
-    name = jfile.split(".")[0]
-    with open(EXAMPLES / jfile, "rb") as source:
-        data = json.load(source)
-
-    if isinstance(data, list):
-        for idx, document in enumerate(data):
-            JSON_DOCUMENTS[f"{name}_doc_{idx}"] = document
-    else:
-        JSON_DOCUMENTS[name] = data
+JSON_DOCUMENTS = json_examples()
 
 
 @pytest.mark.parametrize(
@@ -67,12 +46,12 @@ def datetime_handler(obj):
 
 
 @pytest.mark.parametrize(
-    "yaml_file, json_file", zip(YAML_FILES, JSON_FILES), ids=FILENAMES
+    "yaml_file, json_file", zip(filenames("yaml"), filenames("json")), ids=filenames()
 )
 def test_yaml_json_equal(yaml_file, json_file):
     "The YAML and JSON versions should be the same..."
     # Sanity check yaml data
-    yaml_file = EXAMPLES / yaml_file
+    yaml_file = yaml_file
     assert yaml_file.exists()
     with open(yaml_file, "r") as source:
         documents = list(yaml.load_all(source, Loader=Loader))
@@ -81,7 +60,7 @@ def test_yaml_json_equal(yaml_file, json_file):
         )
 
     # Load and serialize JSON to remove pretty-printing
-    json_file = EXAMPLES / json_file
+    json_file = json_file
     assert json_file.exists()
     with open(json_file, "rb") as source:
         data = json.load(source)
