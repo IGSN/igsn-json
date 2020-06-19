@@ -13,3 +13,7 @@ http://seprojects.marum.de/sitemap.xml
 
 # SESAR test sitemap
 https://github.com/earthchem/igsn-sprint-excersices/blob/master/sitemaps/sitemap-index.xml
+
+# ARDC test sitemap
+
+https://test.handle.ardc.edu.au/igsn/static/sitemap.xml
