@@ -8,6 +8,10 @@
     "@context": {
       "const": "https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld"
     },
+    "@id": {
+      "type": "string",
+      "description": "An identifier for this JSON document (e.g. 'http://example-agent.org/igsn/id/XXXAGENT00234')"
+    },
     "igsn": {
       "$ref": "identifiers.schema.json#/definitions/igsnPid"
     },
@@ -56,5 +60,5 @@
     },
     "log": { "$ref": "eventLog.schema.json" }
   },
-  "required": ["@context", "igsn", "registrant"]
+  "required": ["@context", "@id", "igsn", "registrant"]
 }

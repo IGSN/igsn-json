@@ -10,6 +10,9 @@
 # IGSN data to be valid.
 "@context": https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld
 
+# The ID tag identifies this document
+"@id": https://csiro.au/bogus/igsn/XXXCSIRO0001
+
 # This is the identifier that we are talking about. All identifier objects
 # have a 'kind' key indicating what sort of identifier they are, and an id
 # key pointing to a URI or resource definition

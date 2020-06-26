@@ -10,6 +10,7 @@ We provide the examples in YAML so that they're easier to read (and because JSON
 $ python convert.py minimal_registration.yaml
 {
     "@context": "https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld",
+    "@id": "https://csiro.au/bogus_igsn/XXXCSIRO0001",
     "igsn": "XXXCSIRO0001",
     "registrant": {
         "name": "CSIRO",
@@ -55,10 +56,11 @@ Let's walk through the examples we've got...
 
 ## Minimal registration
 
-This is the minimal set of metadata required to define an IGSN - the `registrant` field pointing to the allocating agent, and the identifier itself. Not very useful but easy to do:
+This is the minimal set of metadata required to define an IGSN - the `registrant` field pointing to the allocating agent, an `@id` tag that identifies the JSON document, and the identifier itself. Not very useful but easy to do:
 
 ```yaml
 "@context": https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld
+"@id": https://csiro.au/bogus_igsns/XXXCSIRO0001
 igsn: XXXCSIRO0001
 registrant:
   name: CSIRO
@@ -168,6 +170,7 @@ We'll say that an archeology team from ANU, in collaboration with the Museum of 
 
 ```yaml
 "@context": https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld
+@id: https://mfo.org/specimens/XXXMFO0001
 igsn: XXXMFO0001
 registrant:
   name: Museum of Fictional Objects
@@ -205,6 +208,7 @@ The team have also sampled the stratigraphic horizon that this tooth was found i
 
 ```yaml
 "@context": https://raw.githubusercontent.com/IGSN/igsn-json/master/schema.igsn.org/json/registration/v0.1/context.jsonld
+@id: https://mfo.org/specimens/XXXMFO0002
 igsn: XXXMFO0002
 registrant:
   $ref: http://igsn.org/XXXMFO001#registrant
